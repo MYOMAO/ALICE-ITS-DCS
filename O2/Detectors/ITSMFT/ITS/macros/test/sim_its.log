@@ -1,0 +1,1520 @@
+[INFO] RNG INITIAL SEED 1545937753
+[WARN] FairRun::SetOutputFile() deprecated. Use FairRootFileSink.
+[INFO] Media file used: /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/share/Detectors/Geometry/media.geo
+[INFO] MagneticField::CreateField: Maximim possible beam energy for requested beam is assumed
+[INFO] MagneticField::Print: Maps:
+[INFO] MagneticField::Print: Solenoid (-1*)5 kG, Dipole ON (-1) 
+[INFO] MagneticField::Print: Machine B fields for p-p  beam (7000 GeV): QGrad: 22.0002 Dipole: 37.8781
+[INFO] MagneticField::Print: Uses Sol30_Dip6_Hole  of $(O2_ROOT)/share/Common/maps/mfchebKGI_sym.root
+[INFO] Activating PIPE module
+[INFO] Activating ITS module
+[INFO] L# 0 Phi:16.42 R:2.34 Nst:12 Nunit:9 W:1.5 Tilt:-17.503 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 1 Phi:12.18 R:3.15 Nst:16 Nunit:9 W:1.5 Tilt:-17.9445 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 2 Phi:9.55 R:3.93 Nst:20 Nunit:9 W:1.5 Tilt:-16.9423 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 3 Phi:0 R:19.6 Nst:24 Nunit:4 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 4 Phi:0 R:24.55 Nst:30 Nunit:4 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 5 Phi:0 R:34.39 Nst:42 Nunit:7 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 6 Phi:0 R:39.34 Nst:48 Nunit:7 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] Init box generator
+[INFO] O2RUNSIM SPECIFIC INIT CALLED
+[INFO] FairRootFileSink initialized.
+[INFO]  - cbmroot
+[INFO]     - o2sim.root
+Info in <TGeoManager::TGeoManager>: Geometry FAIRGeom, FAIR geometry created
+[INFO] FairGeoMedia: Read media 
+[INFO] MagFieldContFact::createContainer: Creating mag.field container MagFieldParam
+[INFO] Setting up G3 sim from library code 
+-I- G3Config: Geant3 with TGeo has been created.
+SetCuts Macro: Setting Processes..
+[INFO] Set default settings for processes and cuts.
+[INFO] Special process settings are enabled.
+[INFO] Special cut settings are enabled.
+[INFO] Initialising primary generator
+[INFO] Setting interaction diamond: position = {0,0,0} cm
+[INFO] Setting interaction diamond: width = {0,0,0} cm
+[INFO] Setting up CAVE without ZDC
+Info in <TGeoManager::SetTopVolume>: Top volume is cave. Master volume is cave
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+Info in <TGeoManager::CheckGeometry>: Fixing runtime shapes...
+Info in <TGeoManager::CheckGeometry>: ...Nothing to fix
+Info in <TGeoManager::CloseGeometry>: Counting nodes...
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CloseGeometry>: Building cache...
+Info in <TGeoManager::CountLevels>: max level = 8, max placements = 108
+Info in <TGeoManager::CloseGeometry>: 179073 nodes/ 298 volume UID's in FAIR geometry
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+[INFO] TGeometry will not be imported to VMC
+
+Warning in <TGeoManager::CloseGeometry>: geometry already closed
+[INFO] FairMCApplication::InitGeometry: 0
+[INFO] Simulation RunID: 1551261254
+[INFO] CREATING BRANCH ITSHit
+[INFO] Creating branch for ITSHit with address 0x6ef4ce0
+[INFO] CREATING BRANCH IndexedTrackRefs
+[INFO] Creating branch for IndexedTrackRefs with address 0x770faf8
+[INFO] CREATING BRANCH MCTrack
+[INFO] Creating branch for MCTrack with address 0x770fa60
+[INFO] CREATING BRANCH TrackRefs
+[INFO] Creating branch for TrackRefs with address 0x770faf0
+[INFO] Monte Carlo Engine Initialisation with: TGeant3TGeo
+Warning in <TGeoManager::CloseGeometry>: geometry already closed
+[INFO] Add ITS alignable volumes
+Info in <TGeoManager::Export>: Exporting FAIRGeom FAIR geometry as root file. Optimizations streamed.
+[INFO] ***  FairBaseParSet written to ROOT file   version: 4
+[INFO] ***  FairGeoParSet written to ROOT file   version: 4
+[INFO] ***  MagFieldParam written to ROOT file   version: 4
+--------------------------------------------------------------------------------
+--------------  actual containers in runtime database  -------------------------
+FairBaseParSet                                 class for parameter io
+FairGeoParSet                                  class for Geo parameter
+MagFieldParam                                  Mag. Field Parameters
+--------------  runs, versions  ------------------------------------------------
+run id
+  container                                        1st-inp    2nd-inp    output
+run: 1551261254
+  FairBaseParSet                                1551261254         -1          4
+  FairGeoParSet                                 1551261254         -1          4
+  MagFieldParam                                         -1         -1          4
+--------------  input/output  --------------------------------------------------
+first input: none
+second input: none
+output:
+OBJ: FairParRootFile	o2sim_par.root	 : 0 at: 0x961f0d0
+Root file I/O o2sim_par.root is open
+detector I/Os:  FairGenericParIo
+Run: 1551261254
+Fill:      0
+Period: 
+LHC State: 
+Start: Wed Feb 27 10:54:15 2019
+End  : Wed Feb 27 10:54:16 2019
+Beam0: Z:A =   0:  0, Energy = 0.000
+Beam1: Z:A =   0:  0, Energy = 0.000
+sqrt[s]    = 0.000
+crossing angle (radian) = 0.000000e+00
+magnet currents (A) L3 = 0.000, Dipole = 0
+Detectors: Cont.RO Triggers
+      ITS:    -       -    
+VMC: 0x7712c70
+[INFO] Init: Real time 2.35128 s, CPU time 1.96s
+[INFO] Init: Memory used 312.535 MB
+BoxGen: kf=211, p=(-0.21, 3.14, 0.73) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.48, -1.05, 0.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.89, 1.88, 0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.07, -0.31, 0.61) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.62, 2.13, -0.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.12, 0.07, 0.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.71, -0.01, 0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.50, -1.28, -0.97) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.07, 1.21, 0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.50, -1.25, -0.46) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] This event/chunk did 4751 steps
+BoxGen: kf=211, p=(2.29, -1.23, -0.53) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.98, 1.14, 1.90) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.86, 0.37, 0.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.99, 3.41, 1.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.13, 0.06, 1.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.59, 0.08, -0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.89, 0.10, -1.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.81, 2.78, 0.94) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.76, -0.12, 0.37) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.14, -0.30, 0.12) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] This event/chunk did 5117 steps
+BoxGen: kf=211, p=(-0.67, 0.82, 0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.28, 1.07, 1.38) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.17, -1.65, 2.48) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.33, 0.88, -1.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.38, 0.77, 0.55) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.97, -1.49, -2.49) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.01, -3.12, 1.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.30, 0.66, 2.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.95, 3.51, 1.83) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.62, -0.43, 0.16) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 22 out of 72 stored 
+
+[INFO] This event/chunk did 24272 steps
+BoxGen: kf=211, p=(2.83, 1.36, -0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.15, 0.29, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.13, 2.45, 1.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.37, 0.26, -0.83) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.50, -0.21, 0.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.84, -0.45, -0.81) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.55, 0.67, -2.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.10, 1.60, -1.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.35, -2.52, -2.74) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.77, -3.57, -2.12) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 17 out of 37 stored 
+
+[INFO] This event/chunk did 12049 steps
+BoxGen: kf=211, p=(3.54, 0.43, 0.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.90, -0.53, 0.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.66, -2.13, -1.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.98, 2.02, 3.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.23, 0.03, 0.03) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.27, -0.16, -0.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.16, 3.77, -1.97) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.09, -1.68, -0.75) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.08, -0.58, 0.83) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.46, -2.93, 2.05) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 18 stored 
+
+[INFO] This event/chunk did 5959 steps
+BoxGen: kf=211, p=(3.36, -2.13, -0.03) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.31, -1.27, -0.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.00, -4.86, -0.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.10, -3.12, -1.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.76, 1.21, -0.00) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.01, -0.63, 0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.27, 0.49, 0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.01, 1.01, -0.57) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.81, 3.24, 2.90) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.11, -2.65, 1.84) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 21 stored 
+
+[INFO] This event/chunk did 6001 steps
+BoxGen: kf=211, p=(0.32, -3.02, 1.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.15, 3.27, 1.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.72, 1.49, 1.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.01, 4.21, 1.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.79, 3.95, 0.44) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.73, 1.67, 0.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.04, -0.23, 0.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.62, -3.46, -2.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.06, 2.33, 2.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.55, -3.17, 1.51) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 15 out of 38 stored 
+
+[INFO] This event/chunk did 10147 steps
+BoxGen: kf=211, p=(0.20, -0.19, -0.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.60, -1.66, -0.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.23, -3.26, -3.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.87, 0.85, -2.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.49, -1.07, -0.74) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.12, -1.87, 1.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.50, -3.24, 0.91) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.58, -0.62, 0.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.59, -0.32, 2.63) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.48, 0.28, 0.29) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 32 stored 
+
+[INFO] This event/chunk did 7500 steps
+BoxGen: kf=211, p=(-0.56, 1.22, 0.80) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.01, 0.14, -0.00) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.77, -0.83, 0.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.31, 0.64, 0.62) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.45, 1.20, -1.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.08, -1.09, 1.00) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.83, 1.52, -0.54) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.49, 2.91, 1.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.06, -0.16, 0.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.25, 1.15, 0.55) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 15 stored 
+
+[INFO] This event/chunk did 9469 steps
+BoxGen: kf=211, p=(0.21, -0.24, -0.32) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.38, 0.10, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.52, 2.78, 2.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.15, 4.09, -1.97) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.79, 1.12, 0.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.52, -0.98, 1.51) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.94, -0.49, 0.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.86, -0.80, 0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.47, 3.05, -0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.77, -0.80, -0.92) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 13 stored 
+
+[INFO] This event/chunk did 5050 steps
+BoxGen: kf=211, p=(-1.73, 1.28, -1.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.59, -0.02, -0.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.74, -0.87, -1.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.36, -0.49, -0.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.45, 0.18, -0.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.18, 2.85, -3.11) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.48, 1.32, -0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.41, 1.98, 2.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.34, 0.55, -0.77) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.37, -2.39, -1.22) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 5063 steps
+BoxGen: kf=211, p=(-2.43, 1.20, -2.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.07, 2.85, 1.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.21, -0.38, 0.54) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.36, 1.16, -0.55) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.39, 2.19, -1.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.72, 1.58, -0.03) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.51, 0.64, -0.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.58, 0.80, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.32, 1.99, -2.32) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.47, -1.21, -1.39) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 15 out of 34 stored 
+
+[INFO] This event/chunk did 8447 steps
+BoxGen: kf=211, p=(3.46, 0.54, 2.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.18, -1.11, -0.51) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.18, 0.80, 0.52) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.12, -0.27, -0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.90, 2.19, 2.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.10, 1.73, 0.53) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.93, -0.78, -2.45) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.83, 0.32, 2.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.76, -0.36, 1.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.15, 0.23, 0.16) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] This event/chunk did 5275 steps
+BoxGen: kf=211, p=(-2.63, 3.09, -2.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.43, 0.77, -0.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.74, -0.82, -0.29) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.03, -0.20, 0.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.49, 1.81, 0.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.53, -0.22, 0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.90, 0.38, -1.95) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.86, -1.19, 2.54) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.00, 0.03, -0.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.11, 0.64, 2.10) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 5228 steps
+BoxGen: kf=211, p=(1.31, 0.92, -1.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.64, 0.40, 0.37) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.33, 0.19, 0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.18, 3.09, 0.74) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.08, -1.26, -1.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.19, 1.63, 1.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.53, 1.44, 0.71) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.96, -2.28, 2.45) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.35, -2.47, 0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.12, -0.12, 0.10) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 5128 steps
+BoxGen: kf=211, p=(-0.82, 0.11, -0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.25, 1.39, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.24, -1.40, -0.71) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.27, -1.70, 0.96) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.63, -1.75, 0.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.64, 2.99, -0.67) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.43, -0.59, 1.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.17, -1.78, 1.43) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.65, 1.15, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.89, -2.78, 1.49) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 13 out of 48 stored 
+
+[INFO] This event/chunk did 7718 steps
+BoxGen: kf=211, p=(0.53, 0.08, 0.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.61, 2.48, 1.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.05, 0.35, -0.40) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.67, -1.39, -1.25) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.50, 1.70, 0.85) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.65, 2.91, 2.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.45, -3.12, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.10, -0.72, 0.43) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.16, 0.72, -1.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.13, 2.30, -0.49) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 28 stored 
+
+[INFO] This event/chunk did 8254 steps
+BoxGen: kf=211, p=(0.44, -1.42, -1.41) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.76, -0.71, -1.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.03, 2.18, 0.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.91, 1.55, 0.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.17, -3.44, 2.29) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.10, -0.76, 0.53) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.31, 0.76, -0.83) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.38, 0.67, 0.52) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.76, -0.79, 0.60) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.36, 1.28, -0.52) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 12 out of 13 stored 
+
+[INFO] This event/chunk did 4739 steps
+BoxGen: kf=211, p=(-3.51, -1.33, -1.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.80, 1.79, 1.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.09, -1.88, -2.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.02, 4.19, 2.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.95, -0.19, -0.52) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.66, -4.26, 1.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.29, 0.52, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.93, 0.32, 0.22) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.27, 0.33, 0.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.35, -0.03, 0.04) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 34 stored 
+
+[INFO] This event/chunk did 7433 steps
+BoxGen: kf=211, p=(0.49, 4.48, 1.65) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.56, -2.89, -2.97) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.08, 1.04, 0.40) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.77, 0.81, 1.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.21, -2.11, 1.41) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.65, 2.68, -0.76) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.03, -1.51, -0.45) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.27, -0.79, -0.82) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.34, -0.17, 1.22) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.75, 1.94, -0.11) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 18 out of 37 stored 
+
+[INFO] This event/chunk did 20553 steps
+BoxGen: kf=211, p=(0.54, 0.04, -0.37) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.37, 3.39, 2.38) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.55, 3.06, -1.65) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.89, 4.45, -2.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.93, -1.82, 2.62) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.21, 3.55, -3.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.34, 3.16, -1.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.01, -2.22, -2.47) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.77, 1.36, 1.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.44, 2.71, -3.08) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 27 stored 
+
+[INFO] This event/chunk did 5105 steps
+BoxGen: kf=211, p=(0.52, 0.33, 0.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.67, 1.09, -0.61) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.02, -4.69, 1.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.14, -1.79, 0.92) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.12, 1.53, -1.95) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.61, -0.75, 0.47) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.68, 1.69, -1.55) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.18, 0.41, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.35, 0.43, -0.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.47, 1.52, -2.04) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 5072 steps
+BoxGen: kf=211, p=(-1.90, 3.20, -1.86) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.31, -1.48, -1.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.47, -4.02, 0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.98, 0.12, 1.43) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.68, -1.13, -2.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.28, -1.51, 1.22) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.17, 2.84, -1.80) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.59, 2.85, -1.70) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.63, 2.48, -2.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.59, -1.73, -0.36) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 32 stored 
+
+[INFO] This event/chunk did 6305 steps
+BoxGen: kf=211, p=(-1.38, -3.55, -0.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.22, 0.28, 0.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.56, 1.37, -0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.30, 3.41, -1.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.17, 2.47, 0.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.23, -1.38, 0.90) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.61, 0.77, -1.47) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.23, -1.05, 0.90) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.75, 0.68, -1.38) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.02, 4.20, 0.67) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 22 stored 
+
+[INFO] This event/chunk did 5430 steps
+BoxGen: kf=211, p=(-0.67, -0.90, 0.95) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.91, 2.56, -2.74) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.89, -1.36, -0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.27, -0.36, -0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.67, 0.38, 1.65) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.26, -0.02, -0.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.99, 0.15, 0.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.68, 1.83, 0.58) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.66, -3.32, 2.64) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.92, 1.56, 0.48) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 13 out of 20 stored 
+
+[INFO] This event/chunk did 5871 steps
+BoxGen: kf=211, p=(2.93, 2.03, 0.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.14, -0.42, -0.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.33, 0.02, -0.90) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.90, -0.87, 1.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.35, 2.89, 1.84) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.50, -1.94, -1.70) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.74, -0.11, -1.07) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.15, -0.03, -0.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.16, -1.53, -0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.80, -2.70, -2.09) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 16 out of 33 stored 
+
+[INFO] This event/chunk did 8944 steps
+BoxGen: kf=211, p=(0.41, -3.08, -2.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.39, 1.88, 1.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.13, -2.60, 1.99) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.21, -4.02, 0.44) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.69, -2.20, 0.67) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.01, -4.03, -0.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.15, -2.21, -1.79) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.21, -2.08, -1.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.57, -1.84, 1.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.26, 3.44, 2.56) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 10 stored 
+
+[INFO] This event/chunk did 4387 steps
+BoxGen: kf=211, p=(2.55, -1.74, -1.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.37, 0.98, 1.48) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.84, 0.92, -0.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.38, -2.56, -2.64) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.16, -1.94, 1.75) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.58, 0.86, 1.62) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.66, -0.70, -0.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.44, 0.35, 0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.80, -2.25, 0.22) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.36, -0.26, 2.75) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 10 stored 
+
+[INFO] This event/chunk did 4797 steps
+BoxGen: kf=211, p=(1.92, -2.75, -3.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.81, 0.24, -0.62) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.97, 2.88, -3.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.43, -3.43, 1.22) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.23, -0.91, -0.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.27, 3.08, -1.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.46, 1.33, -0.99) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.04, -3.46, -0.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.44, -1.67, 2.61) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.18, -1.77, -0.27) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 10 stored 
+
+[INFO] This event/chunk did 4923 steps
+BoxGen: kf=211, p=(0.33, 0.42, 0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.25, -1.19, 0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.37, -0.99, 3.07) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.97, 3.39, 3.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.79, 3.36, -0.73) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.34, 3.43, -1.73) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.55, -0.29, -0.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.45, 1.12, 0.65) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.49, 1.72, 0.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.20, -2.07, -2.14) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 29 stored 
+
+[INFO] This event/chunk did 5255 steps
+BoxGen: kf=211, p=(-2.18, 2.84, 2.58) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.13, 1.75, -1.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.16, -2.90, -2.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.30, 3.42, 1.41) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.26, -1.14, 0.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.19, -0.84, -0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.76, 2.34, 1.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.21, 0.17, 0.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.34, -2.62, -1.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.20, -1.58, -0.10) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] This event/chunk did 4966 steps
+BoxGen: kf=211, p=(-0.29, -0.08, -0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.70, 0.86, -0.65) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.17, 1.46, -0.70) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.72, 2.04, 0.87) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.11, 2.75, -3.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.83, 0.23, -0.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.80, -3.08, 0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.17, 0.43, -0.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.79, -0.72, 0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.11, -0.02, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 15 stored 
+
+[INFO] This event/chunk did 6114 steps
+BoxGen: kf=211, p=(-0.58, 1.03, 0.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.65, 2.52, -0.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.90, 1.32, -0.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.78, 0.06, 0.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.98, 2.44, 0.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.63, -0.42, -0.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.09, -0.37, -0.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.99, -1.51, 2.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.29, 2.69, -0.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.73, -3.11, -1.55) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 4844 steps
+BoxGen: kf=211, p=(1.43, -3.07, 1.43) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.63, -1.04, -0.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.87, -1.22, 0.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.41, -0.24, 0.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.31, -0.37, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.25, 2.23, -2.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.45, -1.10, 1.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.16, -1.75, -2.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.48, -0.38, -0.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.14, 3.94, 0.75) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 15 stored 
+
+[INFO] This event/chunk did 5192 steps
+BoxGen: kf=211, p=(0.60, 0.15, -0.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.44, 0.33, -1.38) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.55, -0.55, 0.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.59, 1.60, -1.41) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.34, 0.62, 0.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.68, 3.40, 1.63) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.42, -1.19, 1.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.48, -1.33, 0.77) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.71, 0.33, -1.71) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.23, 0.41, -0.28) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 15 out of 28 stored 
+
+[INFO] This event/chunk did 6810 steps
+BoxGen: kf=211, p=(0.02, 0.52, 0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.51, -0.50, 2.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.25, 0.07, 0.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.63, -0.58, 0.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.43, 0.50, 0.57) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.61, -0.08, -1.91) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.51, -0.79, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.99, -0.01, -1.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.61, -0.39, -0.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.62, 1.78, -1.22) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 26 stored 
+
+[INFO] This event/chunk did 13683 steps
+BoxGen: kf=211, p=(-2.34, -1.60, -1.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.55, 1.17, 3.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.88, 0.21, 0.62) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.27, 0.19, -0.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.06, 0.08, 0.03) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.30, -0.58, -2.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.70, 0.99, 1.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.70, -0.64, -0.63) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.17, 0.21, -2.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.61, 3.28, 0.03) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] This event/chunk did 7995 steps
+
+ MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr   445738831    1A916F4F HEX
+
+ MZSTOR.  Initialize Store  0  in /GCBANK/
+          with Store/Table at absolute adrs   440293181   445738831
+                                        HEX    1A3E573D    1A916F4F
+                                        HEX    FFACE5DA           0
+                              relative adrs    -5446182           0
+          with     1 Str. in     2 Links in   5300 Low words in 4999970 words.
+          This store has a fence of   16 words.
+
+ MZLOGL.  Set Log Level 0 for store  0
+1*****  GEANT Version  3.21/11 Released on 100298
+0*****  Correction Cradle Version  0.1100
+
+ MZDIV.   Initialize Division  Constant  in Store  0
+          NW/NWMAX=   20004000000,  MODE/KIND=  1  2
+          Division 20 initialized.
+
+ MZLINK.  Initialize Link Area  /GCLINK/  for Store  0 NL/NS=    20    20
+
+ MZLINK.  Initialize Link Area  /GCSLNK/  for Store  0 NL/NS=   100   100
+
+ Calculating cross section tables, see gphysi.dat for more information
+
+ Cross section calculation concluded successfully
+ **** GTRIGI: IEVENT=      1 IDEVT=      1 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=      2 IDEVT=      2 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=      3 IDEVT=      3 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=      4 IDEVT=      4 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=      5 IDEVT=      5 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=      6 IDEVT=      6 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=      7 IDEVT=      7 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=      8 IDEVT=      8 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=      9 IDEVT=      9 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     10 IDEVT=     10 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     11 IDEVT=     11 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     12 IDEVT=     12 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     13 IDEVT=     13 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     14 IDEVT=     14 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     15 IDEVT=     15 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     16 IDEVT=     16 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     17 IDEVT=     17 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     18 IDEVT=     18 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     19 IDEVT=     19 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     20 IDEVT=     20 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     21 IDEVT=     21 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     22 IDEVT=     22 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     23 IDEVT=     23 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     24 IDEVT=     24 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     25 IDEVT=     25 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     26 IDEVT=     26 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     27 IDEVT=     27 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     28 IDEVT=     28 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     29 IDEVT=     29 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     30 IDEVT=     30 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     31 IDEVT=     31 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     32 IDEVT=     32 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     33 IDEVT=     33 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     34 IDEVT=     34 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     35 IDEVT=     35 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     36 IDEVT=     36 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     37 IDEVT=     37 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     38 IDEVT=     38 Random Seeds = 1545937753           0
+BoxGen: kf=211, p=(-2.17, -3.64, -1.54) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.46, -1.40, 1.40) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.55, 1.02, -1.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.49, 3.00, 1.95) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.11, 4.29, 0.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.41, -0.04, 1.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.86, 0.21, 1.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.75, 1.95, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.28, 1.50, -1.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.63, 1.64, -0.30) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 15 out of 58 stored 
+
+[INFO] This event/chunk did 10630 steps
+BoxGen: kf=211, p=(0.21, -2.44, 1.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.90, 2.60, 0.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.20, 2.34, 1.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.27, 0.08, 1.73) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.22, -1.36, 0.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.92, -2.23, -0.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.02, 0.41, -0.81) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.53, 1.20, -0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.06, 2.06, -1.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.54, -1.82, -1.27) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] This event/chunk did 4910 steps
+BoxGen: kf=211, p=(-1.96, -0.13, 0.49) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.30, 4.01, 0.37) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.76, -4.03, 0.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.78, -0.80, -1.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.32, -2.87, 0.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.03, -0.95, -2.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.16, -1.62, 0.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.77, 0.43, 0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.60, -1.49, 1.51) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.84, 1.95, -2.01) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 21 out of 48 stored 
+
+[INFO] This event/chunk did 26901 steps
+BoxGen: kf=211, p=(2.75, -1.53, 0.44) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.29, 0.21, -0.11) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.64, -2.15, 0.44) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.22, -2.68, -2.60) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.54, 0.87, -0.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.31, -1.06, -1.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.29, 3.81, 1.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.08, 0.06, 0.07) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.27, 1.38, -0.66) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.07, -1.10, -2.19) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 13 out of 20 stored 
+
+[INFO] This event/chunk did 7714 steps
+BoxGen: kf=211, p=(2.77, 1.36, -0.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.44, -0.55, 0.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.24, -3.30, -3.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.62, 0.73, 0.93) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.45, -2.25, -2.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.16, 0.24, -2.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.97, -2.30, 1.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.58, -0.09, -0.82) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.20, -0.17, 0.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.31, 0.35, -0.35) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 15 stored 
+
+[INFO] This event/chunk did 5282 steps
+BoxGen: kf=211, p=(1.22, 1.84, 0.87) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.80, -0.27, 1.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.16, 3.37, -2.62) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.38, -0.83, -0.73) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.48, -0.21, -3.45) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.69, -1.31, -1.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.08, 0.75, 0.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.04, -0.13, -0.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.83, 0.72, 0.41) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.35, 3.65, 3.14) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 22 out of 74 stored 
+
+[INFO] This event/chunk did 19238 steps
+BoxGen: kf=211, p=(-1.30, -4.08, -0.64) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.19, 1.74, -0.80) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.48, -3.71, -3.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.75, 0.79, -0.81) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.18, 1.28, -0.95) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.36, 0.79, -0.45) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.18, 0.85, 0.47) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.03, 1.19, -0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.68, 2.46, 2.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.08, 1.68, -0.23) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 4829 steps
+BoxGen: kf=211, p=(0.90, 3.48, -0.63) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.05, -0.96, 2.99) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.55, -0.59, 0.08) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.12, -0.02, 0.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.14, 0.26, -0.29) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.15, -3.73, 1.03) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.09, 1.04, 0.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.02, 0.13, -1.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.53, -0.06, -0.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.01, 0.95, -0.57) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] This event/chunk did 6394 steps
+BoxGen: kf=211, p=(-4.33, -1.25, -0.58) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.82, 0.49, 0.53) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.89, 2.77, 1.83) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.67, -2.78, -2.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.11, -0.59, -0.55) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.29, 4.18, 1.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.26, 4.95, -0.63) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.66, 0.81, 2.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.38, 0.21, -1.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.84, -2.50, -0.94) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 23 stored 
+
+[INFO] This event/chunk did 5207 steps
+BoxGen: kf=211, p=(-2.95, 0.90, -2.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.07, 0.19, -0.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.06, -0.48, 0.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.58, 2.33, -0.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.53, -0.51, 0.29) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.22, -1.85, 0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.13, -1.04, 0.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.50, 0.85, 2.63) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.63, -2.32, 1.41) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.60, -0.98, 0.53) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 5406 steps
+BoxGen: kf=211, p=(0.03, -0.21, 0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.70, -0.75, -0.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.06, 0.51, 0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.55, 1.27, 1.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.20, -1.41, 2.43) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.72, -0.99, -0.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.33, -1.41, 1.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.62, 1.35, -0.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.51, -0.36, 2.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.49, 0.48, -3.26) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 12 out of 22 stored 
+
+[INFO] This event/chunk did 6046 steps
+BoxGen: kf=211, p=(-2.53, -2.90, -0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.07, 1.40, 1.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.96, 0.79, -0.52) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.47, 0.48, 1.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.35, -0.25, 0.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.92, -0.13, 1.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.58, 1.86, 1.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.26, 1.46, 2.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.02, -2.21, 1.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.50, 0.00, -0.48) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] This event/chunk did 5070 steps
+BoxGen: kf=211, p=(-0.23, -1.08, -0.29) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.19, 0.65, 0.43) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.00, -0.11, 0.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.51, 1.37, 0.41) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.01, -1.51, -0.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.27, -2.04, 1.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.67, -2.21, -0.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.33, -0.32, 2.52) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.26, -0.90, 0.76) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.15, 0.10, 0.03) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 38 stored 
+
+[INFO] This event/chunk did 10620 steps
+BoxGen: kf=211, p=(0.65, 1.77, -0.95) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.26, -1.43, -0.79) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.36, 0.13, -2.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.08, 1.92, 2.03) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.40, -2.99, 1.85) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.18, -0.29, -0.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.34, -0.69, 0.44) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.91, 0.80, -0.58) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.20, -1.11, 0.97) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.76, -1.75, 0.40) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 33 stored 
+
+[INFO] This event/chunk did 7611 steps
+BoxGen: kf=211, p=(3.31, 0.38, -2.97) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.63, 0.95, 0.44) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.46, -0.95, -1.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.90, -2.36, -1.65) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.14, -4.29, 1.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.73, 1.94, -0.11) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.36, 3.69, -0.64) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.28, -3.57, 2.47) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.82, -1.63, 0.89) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.61, -2.97, 0.23) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 17 out of 41 stored 
+
+[INFO] This event/chunk did 7845 steps
+BoxGen: kf=211, p=(-0.20, -0.87, 0.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.77, 0.24, 0.38) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.91, 3.16, -2.55) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.23, -1.06, -0.87) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.92, 0.75, 0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.15, -0.79, 0.75) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.33, 0.31, -0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.09, -0.85, -0.80) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.16, 2.42, 0.40) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.02, 0.92, -0.65) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 5067 steps
+BoxGen: kf=211, p=(1.75, 3.74, -0.43) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.36, -1.91, 1.65) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.22, -0.27, 0.03) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.59, 2.18, 0.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.59, -0.21, 0.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.56, 2.66, 0.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.24, -3.81, -2.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.95, -3.48, 1.65) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.16, -1.44, -1.51) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.63, -0.17, 2.09) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 5379 steps
+BoxGen: kf=211, p=(-1.37, -2.36, 1.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.97, -1.77, 2.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.16, -1.36, 0.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.18, -0.99, 0.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.07, 2.68, 1.63) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.72, 1.50, 0.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.36, -4.00, -2.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.67, 1.64, -1.22) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.07, 2.59, 0.41) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.95, 0.38, 0.36) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 18 stored 
+
+[INFO] This event/chunk did 4754 steps
+BoxGen: kf=211, p=(0.00, 0.27, -0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.47, -0.49, 1.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.58, 0.80, 0.80) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.93, 0.15, -1.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.07, -0.02, 0.07) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.05, -0.10, 0.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.31, -2.97, -2.87) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.52, -0.18, -0.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.39, -2.29, 0.49) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.48, 0.80, 0.60) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 13 out of 26 stored 
+
+[INFO] This event/chunk did 8252 steps
+BoxGen: kf=211, p=(0.31, 0.18, -0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.03, 2.58, 0.90) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.12, 0.02, 0.07) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.17, 0.13, -0.08) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.22, -2.48, -0.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.17, -3.65, 2.62) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.27, -0.60, -0.11) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.16, 1.53, -0.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.12, -0.84, 0.49) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.44, -0.96, -0.52) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 25 stored 
+
+[INFO] This event/chunk did 6613 steps
+BoxGen: kf=211, p=(-2.21, -1.45, 2.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.57, -3.46, -0.84) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.18, -0.39, 0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.50, -1.16, 0.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.90, 1.69, 0.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.41, -0.37, 0.25) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.24, 3.50, -0.55) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.12, 0.93, -1.94) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.70, -0.58, 1.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.46, 2.24, 1.95) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 4792 steps
+BoxGen: kf=211, p=(1.23, -2.62, 2.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.70, -1.06, -1.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.20, -1.09, 2.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.70, 0.63, -0.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.02, -0.77, 1.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.73, 0.27, 0.61) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.07, -1.01, 2.46) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.65, -0.88, 1.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.75, -0.92, -0.03) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.75, 0.97, 1.12) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 25 stored 
+
+[INFO] This event/chunk did 5327 steps
+BoxGen: kf=211, p=(0.21, -1.35, 0.91) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.97, -1.08, -0.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.80, 1.29, -1.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.73, -2.20, -0.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.17, -3.30, 1.81) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.86, 0.07, 0.86) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.53, 1.93, 1.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.78, 1.13, 0.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.67, 2.38, -1.40) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.22, -0.58, 0.40) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 4802 steps
+BoxGen: kf=211, p=(0.22, -3.58, -1.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.14, 2.09, 0.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.15, -2.74, 0.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.57, 0.17, 0.00) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.20, -0.74, 1.22) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.03, -0.62, -1.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.00, -2.62, -2.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.21, -1.75, -1.54) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.15, 2.39, 0.57) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.28, 0.67, 0.79) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 10 stored 
+
+[INFO] This event/chunk did 4755 steps
+BoxGen: kf=211, p=(-0.53, -0.66, -0.48) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.59, 1.58, 2.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.77, -1.35, 0.86) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.63, -1.10, 0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.40, 1.37, 1.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.60, 0.03, -0.94) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.59, -0.66, 0.83) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.20, -0.07, -0.13) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.07, -1.81, 2.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.12, 1.79, -0.53) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 31 stored 
+
+[INFO] This event/chunk did 6674 steps
+BoxGen: kf=211, p=(-0.57, -0.90, -0.46) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.82, 1.75, 1.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.88, -1.79, -2.49) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.33, 1.29, 1.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.03, 1.57, -0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.51, -0.36, 1.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.33, -0.09, -1.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.37, 0.54, -2.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.94, 0.34, 0.54) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.04, -4.46, 0.40) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 10 stored 
+
+[INFO] This event/chunk did 4698 steps
+BoxGen: kf=211, p=(0.33, -0.68, 0.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.65, 1.45, 1.40) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.27, 4.24, 0.64) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.14, -2.54, 0.94) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.48, 4.29, 1.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.86, -1.63, 0.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.58, -1.17, -3.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.96, 0.78, 1.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.08, 0.85, -2.49) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.67, -2.52, -1.42) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 18 stored 
+
+[INFO] This event/chunk did 4909 steps
+BoxGen: kf=211, p=(0.13, -2.66, 2.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.20, 1.02, 0.82) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.58, 3.05, 1.43) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.51, 0.24, 0.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.65, -0.98, 1.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.17, -0.62, 0.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.16, 1.14, 2.43) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.01, 2.69, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.45, -2.55, 1.74) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.31, 3.18, 2.25) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 17 out of 37 stored 
+
+[INFO] This event/chunk did 9508 steps
+BoxGen: kf=211, p=(-0.01, 2.41, 0.91) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.36, 1.75, -0.63) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.71, -2.32, -0.63) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.21, 0.98, 0.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.37, -0.74, 1.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.37, 0.80, 0.48) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.51, 3.50, 0.61) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.21, -0.98, 0.74) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.79, 4.07, 1.64) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.41, -1.50, 0.84) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 13 out of 27 stored 
+
+[INFO] This event/chunk did 8145 steps
+BoxGen: kf=211, p=(0.92, -0.98, -0.37) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.68, 1.58, 0.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.59, -0.79, 0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.25, 1.47, 0.80) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.90, -2.79, 0.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.87, -0.74, -1.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.91, 1.84, 0.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.12, -0.30, -0.07) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.12, -3.71, -1.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.34, 1.16, -1.07) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 5233 steps
+BoxGen: kf=211, p=(1.42, -1.70, 1.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.33, 1.81, 1.80) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.04, -2.12, -2.86) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.86, -0.30, 0.45) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.12, 1.23, -1.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.35, 0.41, 0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.07, 0.38, -0.73) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.74, -3.01, 2.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.47, -0.89, -0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.78, -1.58, 1.56) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 4797 steps
+BoxGen: kf=211, p=(-0.58, 0.28, 0.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.81, -0.44, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.43, 2.28, 0.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.61, -1.53, -1.08) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.77, 3.93, -1.85) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.64, 0.52, -0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.09, 2.36, 2.55) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.68, -2.30, -1.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.19, -0.32, 0.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.27, 0.35, -1.33) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 4863 steps
+BoxGen: kf=211, p=(-0.05, 0.43, 0.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.38, 0.31, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.94, -0.99, 2.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.46, -0.76, 1.47) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.38, 1.76, 0.80) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.70, 4.31, -0.81) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.18, 2.80, 2.40) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.10, -0.70, -0.60) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.14, 3.08, 0.51) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.00, -0.02, -0.69) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 23 out of 37 stored 
+
+[INFO] This event/chunk did 14069 steps
+BoxGen: kf=211, p=(-1.69, 2.50, 1.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.20, 0.61, 0.32) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.58, -2.16, 1.38) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.43, -0.81, -0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.30, -0.66, -0.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.13, 0.49, 1.84) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.50, -1.07, -0.71) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.07, -0.26, -0.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.85, 0.19, -0.54) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.06, -0.51, 0.32) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 15 stored 
+
+[INFO] This event/chunk did 5113 steps
+BoxGen: kf=211, p=(-0.76, 0.26, 0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.53, -1.79, 1.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.98, 0.08, 0.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.52, 1.19, 1.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.70, 0.17, 2.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.92, 0.41, 0.08) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.03, 4.18, -2.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.30, -3.07, 2.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.22, -0.10, 0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.07, -2.73, -2.07) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 5119 steps
+BoxGen: kf=211, p=(-1.24, -0.14, -0.95) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.49, -0.10, 0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.99, -2.75, -2.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.63, -1.39, 0.88) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.83, 1.23, -1.89) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.29, 0.64, -0.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.14, -3.78, 1.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.56, 1.21, -1.97) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.98, -0.93, -0.91) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.75, 1.31, -0.92) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 30 stored 
+
+[INFO] This event/chunk did 7048 steps
+BoxGen: kf=211, p=(-2.98, -1.85, 1.89) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.53, -2.45, -1.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.23, -1.71, -0.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.37, -1.50, -1.81) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.78, -1.57, 1.67) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.93, -2.37, -2.93) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.18, -1.60, 0.92) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.01, 0.73, 0.79) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.01, -2.20, 2.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.87, 0.38, -0.35) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 16 out of 28 stored 
+
+[INFO] This event/chunk did 9866 steps
+BoxGen: kf=211, p=(-0.35, -4.30, -0.61) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.81, -1.92, -1.03) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.19, -1.32, -1.37) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.71, 1.11, -0.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.58, -0.10, -1.99) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.75, 0.17, -0.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.79, 2.80, -2.22) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.79, 0.83, 1.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.70, 2.28, -1.99) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.53, -2.43, 1.64) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] This event/chunk did 4768 steps
+BoxGen: kf=211, p=(-0.19, 3.31, -0.94) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.02, -0.10, 0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.45, 0.26, 0.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.30, -1.02, 2.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.28, -0.03, -0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.32, 1.32, -0.53) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.18, 0.66, 0.85) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.44, 0.71, -0.71) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.58, 1.72, -0.49) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.83, 2.48, 3.09) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 6034 steps
+BoxGen: kf=211, p=(-0.02, -0.95, -0.45) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.68, -3.28, 2.67) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.94, 1.89, 0.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.06, -0.43, 0.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.18, -0.08, -0.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.09, -1.37, 0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.28, 2.11, 2.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.00, 0.55, -0.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.32, -0.69, 0.53) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.15, -2.41, -0.47) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] This event/chunk did 4613 steps
+BoxGen: kf=211, p=(-0.91, -0.07, 0.76) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.23, -2.00, -0.82) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.06, 1.29, 1.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.89, 2.33, 3.22) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.01, -4.63, -0.00) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.11, -0.41, 0.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.22, 1.64, -1.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.34, 2.36, 2.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.57, 0.15, 1.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.82, 2.35, -1.52) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 12 out of 27 stored 
+
+[INFO] This event/chunk did 6021 steps
+BoxGen: kf=211, p=(3.66, 2.45, 1.96) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.04, 0.88, 0.37) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.13, 0.82, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.35, 1.76, 0.94) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.39, 1.78, -1.37) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.52, -2.34, 1.95) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.70, 0.13, 0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.83, 1.44, 0.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.17, 0.32, 0.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.52, 0.80, -1.68) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] This event/chunk did 4996 steps
+BoxGen: kf=211, p=(-0.15, -2.48, 2.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.62, -3.87, -1.57) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.93, 0.63, 0.25) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.00, -0.61, 1.27) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.78, -1.88, -1.38) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.37, 3.39, 2.51) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.69, -0.74, -2.32) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.51, 1.54, -1.97) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.55, -0.48, -3.46) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.17, 1.98, -2.47) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 37 stored 
+
+[INFO] This event/chunk did 16350 steps
+BoxGen: kf=211, p=(0.74, -2.92, -2.66) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.68, -1.04, -0.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.84, -0.51, 0.38) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.27, -4.35, -0.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.43, 1.18, -0.85) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.09, 1.07, -0.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.50, -2.06, -0.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.41, -2.39, -2.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.96, -1.77, -0.17) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.36, -1.76, -1.75) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 10 stored 
+
+[INFO] This event/chunk did 4413 steps
+BoxGen: kf=211, p=(0.71, 2.82, 0.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.93, 0.81, 0.58) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.24, 1.43, -1.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.24, -0.92, 1.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.10, 0.28, 0.11) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.65, 1.37, -1.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.42, -0.55, 0.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.01, 2.91, -1.25) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.28, -2.21, -0.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.05, -2.37, -2.09) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 5126 steps
+BoxGen: kf=211, p=(-2.04, 2.58, -1.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.06, -0.07, 0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.73, 0.45, -2.75) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.83, 1.00, -2.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.02, -2.11, -1.32) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.84, -0.08, 0.45) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.42, 0.03, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.53, -1.04, 0.49) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.57, 1.94, -2.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.33, 0.42, -0.40) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] This event/chunk did 5668 steps
+BoxGen: kf=211, p=(-1.46, -2.53, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.37, -1.53, 1.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.56, 2.25, -2.38) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.28, 0.30, -0.29) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.29, -0.21, 0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.77, 0.42, -0.57) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.29, -0.15, -0.32) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.02, 0.29, 1.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.34, -4.26, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.19, 2.14, 1.21) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 5008 steps
+BoxGen: kf=211, p=(3.87, 1.20, -1.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.04, 0.13, 0.87) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.36, 1.99, -0.69) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.45, 0.16, -0.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.13, -3.44, -0.71) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.13, -1.97, -1.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.08, 0.13, 0.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.86, 0.01, 0.51) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.66, 0.40, -0.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.41, 0.03, -0.39) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 33 stored 
+
+[INFO] This event/chunk did 6520 steps
+BoxGen: kf=211, p=(-0.64, -1.14, -0.60) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.19, 3.46, -2.71) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.12, 2.24, -1.52) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.19, -1.22, -1.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.06, 0.21, -2.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.08, 0.25, 0.07) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.76, 0.20, -2.67) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.08, 2.67, -0.58) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.08, 4.55, 0.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.11, -1.69, 0.50) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 5112 steps
+BoxGen: kf=211, p=(0.23, -0.01, -0.10) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.75, -0.87, 1.61) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.06, -4.80, 0.25) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.89, 0.07, 0.75) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.39, 0.04, -0.37) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.10, -0.71, -0.11) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.13, -2.36, 0.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.84, 1.70, -0.89) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.45, -0.28, 0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.04, 0.37, 0.02) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 11 out of 24 stored 
+
+[INFO] This event/chunk did 7260 steps
+BoxGen: kf=211, p=(0.85, 0.65, -0.94) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.40, 2.70, -0.44) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.10, -1.52, 1.06) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.51, 1.35, -1.47) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.20, 3.00, 0.76) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.02, -0.37, -0.08) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.38, -0.33, -0.08) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.19, 0.11, -0.00) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.09, -1.23, -1.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.52, -1.11, -1.04) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 20 stored 
+
+[INFO] This event/chunk did 5412 steps
+ **** GTRIGI: IEVENT=     39 IDEVT=     39 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     40 IDEVT=     40 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     41 IDEVT=     41 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     42 IDEVT=     42 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     43 IDEVT=     43 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     44 IDEVT=     44 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     45 IDEVT=     45 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     46 IDEVT=     46 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     47 IDEVT=     47 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     48 IDEVT=     48 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     49 IDEVT=     49 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     50 IDEVT=     50 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     51 IDEVT=     51 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     52 IDEVT=     52 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     53 IDEVT=     53 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     54 IDEVT=     54 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     55 IDEVT=     55 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     56 IDEVT=     56 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     57 IDEVT=     57 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     58 IDEVT=     58 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     59 IDEVT=     59 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     60 IDEVT=     60 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     61 IDEVT=     61 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     62 IDEVT=     62 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     63 IDEVT=     63 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     64 IDEVT=     64 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     65 IDEVT=     65 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     66 IDEVT=     66 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     67 IDEVT=     67 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     68 IDEVT=     68 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     69 IDEVT=     69 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     70 IDEVT=     70 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     71 IDEVT=     71 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     72 IDEVT=     72 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     73 IDEVT=     73 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     74 IDEVT=     74 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     75 IDEVT=     75 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     76 IDEVT=     76 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     77 IDEVT=     77 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     78 IDEVT=     78 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     79 IDEVT=     79 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     80 IDEVT=     80 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     81 IDEVT=     81 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     82 IDEVT=     82 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     83 IDEVT=     83 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     84 IDEVT=     84 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     85 IDEVT=     85 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     86 IDEVT=     86 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     87 IDEVT=     87 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     88 IDEVT=     88 Random Seeds = 1545937753           0
+ **** GTRIGI: IEVENT=     89 IDEVT=     89 Random Seeds = 1545937753           0
+BoxGen: kf=211, p=(0.70, -1.23, -0.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.02, -3.84, -0.40) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.13, 3.42, -1.01) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.26, -2.36, 0.60) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.16, 2.26, 1.12) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.02, -0.59, -0.41) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.76, 0.66, 0.48) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.82, -0.26, -1.54) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.18, 3.76, 1.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.62, 0.30, 0.59) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 4827 steps
+BoxGen: kf=211, p=(-3.17, -0.10, 3.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.98, -4.58, 0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.26, 1.18, -1.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.98, 2.56, 2.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.52, -0.21, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.82, -3.16, 0.76) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.52, 1.41, 0.91) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.75, 3.18, -0.08) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.99, 0.32, -0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.66, -2.43, 1.50) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 4771 steps
+BoxGen: kf=211, p=(0.36, 0.58, 0.57) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.55, 4.81, 0.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.91, 0.91, -0.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.48, -0.78, -0.88) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.19, 0.22, -0.66) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.01, -4.65, 1.40) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.69, -1.21, 0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.62, -1.57, 2.08) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.45, 0.85, -0.24) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.73, -2.66, 1.42) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 4689 steps
+BoxGen: kf=211, p=(-1.10, 0.00, 0.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.15, -1.06, 1.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.16, -0.77, 0.55) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.00, 0.76, -0.99) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.09, 1.60, -1.97) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.62, 0.56, -0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.95, 0.49, -1.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.77, -0.11, -0.00) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.98, -0.46, 0.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.94, 2.77, -0.52) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 15 stored 
+
+[INFO] This event/chunk did 4949 steps
+BoxGen: kf=211, p=(0.39, 4.00, 2.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.98, 1.63, 2.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.78, -0.09, 0.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.09, -1.37, -0.58) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.51, 1.33, 1.47) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.54, 4.33, 1.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.09, -0.82, -1.56) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.22, -0.13, 1.89) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.82, 3.72, -1.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.16, 0.24, -0.27) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 4890 steps
+BoxGen: kf=211, p=(-0.54, -2.10, 0.59) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.94, -0.25, -0.04) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.19, 0.24, -0.16) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.48, -0.30, 0.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.40, 3.97, -0.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.83, 0.27, -2.20) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.94, 4.80, -0.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.38, 3.15, 0.51) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.35, -0.55, 0.96) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.03, -1.37, -2.33) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 30 stored 
+
+[INFO] This event/chunk did 7387 steps
+BoxGen: kf=211, p=(-3.30, -1.43, 2.15) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.14, -2.18, -0.98) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.21, -2.12, 1.80) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.88, 0.68, 1.33) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.05, -0.64, -0.47) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.79, 0.40, -1.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.33, -1.31, 0.28) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.67, -1.11, -0.25) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.71, 1.76, -1.95) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(4.39, -0.86, -1.09) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 35 stored 
+
+[INFO] This event/chunk did 7280 steps
+BoxGen: kf=211, p=(2.70, 2.23, -2.71) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.24, 0.30, 0.11) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.78, 0.10, -0.19) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.14, -0.05, 0.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.69, 1.14, -1.85) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.39, 1.59, 0.35) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.10, -0.76, 0.78) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.26, -0.67, 0.83) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.73, 2.32, -2.51) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.36, -0.65, 1.48) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] This event/chunk did 5610 steps
+BoxGen: kf=211, p=(0.05, 0.92, 0.36) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-4.76, 0.64, 0.74) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.76, -1.47, 0.75) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.72, -3.03, 1.99) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.69, -3.57, 2.00) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.15, -0.84, -0.42) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.33, -2.51, -0.50) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.82, 1.59, 2.23) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.24, -2.29, 0.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.87, 2.24, 3.30) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] This event/chunk did 4430 steps
+BoxGen: kf=211, p=(-0.21, 0.55, 0.34) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.44, 3.11, 0.18) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.00, -0.89, 0.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.30, 0.62, 1.99) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.72, -1.64, -0.00) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.37, 0.05, -0.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.34, 0.22, 2.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.24, -0.20, 0.26) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.81, -0.32, 0.68) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.37, 2.05, -2.04) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 13 out of 42 stored 
+
+[INFO] This event/chunk did 10162 steps
+BoxGen: kf=211, p=(-1.29, 1.55, -2.02) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(0.59, 1.63, -0.48) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-3.56, 0.24, -3.11) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.79, 0.23, 2.65) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-1.86, 3.04, 1.45) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.02, 3.14, -1.79) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.58, -2.63, -3.14) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.59, 1.95, -1.71) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.17, 0.83, 0.30) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(3.29, 1.64, 3.31) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] This event/chunk did 4562 steps
+BoxGen: kf=211, p=(0.41, -1.69, 1.09) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.05, -2.71, -3.44) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.84, -1.83, -1.46) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(2.40, -2.33, -3.07) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.84, -0.63, -0.11) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.49, 0.43, 0.21) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.05, -0.25, -1.31) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(1.87, 0.53, 1.72) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-0.44, -2.25, -2.05) GeV, x=(0.0, 0.0, 0.0) cm
+BoxGen: kf=211, p=(-2.34, -0.51, 1.78) GeV, x=(0.0, 0.0, 0.0) cm
+[INFO] Stack: 10 out of 10 stored 
+
+[INFO] This event/chunk did 4710 steps
+[INFO] Macro finished succesfully.
+[INFO] Real time 5.04165 s, CPU time 4.92s
+[INFO] Memory used 315.066 MB
+[INFO] Simulation process took 11.5742 s

@@ -1,0 +1,356 @@
+   ------------------------------------------------------------
+  | Welcome to ROOT 6.14/04                http://root.cern.ch |
+  |                               (c) 1995-2018, The ROOT Team |
+  | Built for linuxx8664gcc                                    |
+  | From tag v6-14-04, 23 August 2018                          |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
+   ------------------------------------------------------------
+
+
+
+ATTENTION: ./rootlogon.C has been used !
+
+
+
+Processing /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/share/macro/run_digi_its.C+(0.)...
+Info in <TUnixSystem::ACLiC>: creating shared library /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/share/macro/run_digi_its_C.so
+Warning in <TClassTable::Add>: class FairLogger already in TClassTable
+Warning in <TClassTable::Add>: class FairMonitor already in TClassTable
+Warning in <TClassTable::Add>: class FairSystemInfo already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoBasicShape already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoAssembly already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoCone already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoCons already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoEltu already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoBuilder already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoInterface already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoIo already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoLoader already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoVector already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoMatrix already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoMedia already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoMedium already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoRotation already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoTransform already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoVolume already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoNode already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoOldAsciiIo already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoPcon already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoPgon already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoRootBuilder already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoSet already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoShapes already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoSphe already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoTrap already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoTrd1 already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoTube already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoTubs already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoTorus already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoCompositeVolume already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoAsciiIo already in TClassTable
+Warning in <TClassTable::Add>: class FairGeoBrik already in TClassTable
+Warning in <TClassTable::Add>: class FairContainer already in TClassTable
+Warning in <TClassTable::Add>: class FairContFact already in TClassTable
+Warning in <TClassTable::Add>: class FairDetParIo already in TClassTable
+Warning in <TClassTable::Add>: class FairDetParAsciiFileIo already in TClassTable
+Warning in <TClassTable::Add>: class FairDetParRootFileIo already in TClassTable
+Warning in <TClassTable::Add>: class FairGenericParAsciiFileIo already in TClassTable
+Warning in <TClassTable::Add>: class FairGenericParRootFileIo already in TClassTable
+Warning in <TClassTable::Add>: class FairParIo already in TClassTable
+Warning in <TClassTable::Add>: class FairParAsciiFileIo already in TClassTable
+Warning in <TClassTable::Add>: class FairParSet already in TClassTable
+Warning in <TClassTable::Add>: class FairParGenericSet already in TClassTable
+Warning in <TClassTable::Add>: class FairParRootFile already in TClassTable
+Warning in <TClassTable::Add>: class FairParRootFileIo already in TClassTable
+Warning in <TClassTable::Add>: class FairParamObj already in TClassTable
+Warning in <TClassTable::Add>: class FairParamList already in TClassTable
+Warning in <TClassTable::Add>: class FairParVersion already in TClassTable
+Warning in <TClassTable::Add>: class FairRtdbRun already in TClassTable
+Warning in <TClassTable::Add>: class FairRuntimeDb already in TClassTable
+In file included from /data/zhaozhong/alice/sw/slc7_x86-64/ROOT/v6-14-04-24/include/TNamed.h:25:0,
+                 from /data/zhaozhong/alice/sw/slc7_x86-64/ROOT/v6-14-04-24/include/TDictionary.h:44,
+                 from /data/zhaozhong/alice/sw/slc7_x86-64/ROOT/v6-14-04-24/include/TClass.h:23,
+                 from /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/share/macro/run_digi_its_C_ACLiC_dict.cxx:13:
+/data/zhaozhong/alice/sw/slc7_x86-64/ROOT/v6-14-04-24/include/TObject.h:149:24: warning: 'virtual Int_t TObject::Write(const char*, Int_t, Int_t) const' was hidden [-Woverloaded-virtual]
+    virtual Int_t       Write(const char *name=0, Int_t option=0, Int_t bufsize=0) const;
+                        ^~~~~
+In file included from /data/zhaozhong/alice/sw/slc7_x86-64/FairRoot/c672f280ec-1/include/FairRun.h:16:0,
+                 from /data/zhaozhong/alice/sw/slc7_x86-64/FairRoot/c672f280ec-1/include/FairRunAna.h:19,
+                 from /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/share/macro/run_digi_its.C:7,
+                 from /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/share/macro/run_digi_its_C_ACLiC_dict.cxx:40:
+/data/zhaozhong/alice/sw/slc7_x86-64/FairRoot/c672f280ec-1/include/FairRootManager.h:196:25: warning:   by 'virtual Int_t FairRootManager::Write(const char*, Int_t, Int_t)' [-Woverloaded-virtual]
+     Int_t               Write(const char* name=0, Int_t option=0, Int_t bufsize=0);
+                         ^~~~~
+[WARN] FairRun::SetOutputFile() deprecated. Use FairRootFileSink.
+[INFO] Set Alpide charge threshold to 150, single hit will be accounted from 15 electrons 
+[INFO] The input consists out of the following trees and files: 
+[INFO]  - o2sim
+[INFO]     - o2sim.root
+[INFO] FairRootFileSink initialized.
+[INFO]  - cbmout
+[INFO]     - itsdigits.root
+[INFO] Parameter and input file are available, Assure that basic info is there for the run!
+
+************************************************************* 
+     initialisation for run id 1551261254
+************************************************************* 
+-I- FairRunTimeDB::InitContainer() FairGeoParSet
+Info in <TGeoManager::CloseGeometry>: Geometry loaded from file...
+Info in <TGeoManager::SetTopVolume>: Top volume is cave. Master volume is cave
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CountLevels>: max level = 8, max placements = 108
+Info in <TGeoManager::CloseGeometry>: 179073 nodes/ 298 volume UID's in FAIR geometry
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+Container FairGeoParSet initialized from ROOT file.
+-I- FairRunTimeDB::InitContainer() FairBaseParSet
+Container FairBaseParSet initialized from ROOT file.
+[INFO] MagFieldContFact::createContainer: Creating mag.field container MagFieldParam
+
+************************************************************* 
+     initialisation for run id 1551261254
+************************************************************* 
+-I- FairRunTimeDB::InitContainer() FairGeoParSet
+-I- FairRunTimeDB::InitContainer() FairBaseParSet
+-I- FairRunTimeDB::InitContainer() MagFieldParam
+Container MagFieldParam initialized from ROOT file.
+creating the field as unmanaged pointer
+[INFO] MagneticField::Print: MagFieldParam:
+[INFO] MagneticField::Print: Solenoid (-1*)5 kG, Dipole ON (-1) 
+[INFO] MagneticField::Print: Machine B fields for p-p  beam (7000 GeV): QGrad: 22.0002 Dipole: 37.8781
+[INFO] MagneticField::Print: Uses Sol30_Dip6_Hole  of $(O2_ROOT)/share/Common/maps/mfchebKGI_sym.root
+[INFO] Loading ITS L2G matrices from TGeo 
+Warning in <TTree::Bronch>: FairEventHeader cannot be split, resetting splitlevel to 0
+Alpide response object of 40500 matrices to map chagre in xyz to 5x5 pixels
+X(col) range: +0.000000e+00 : +1.462000e-03 | step: 5.000000e-05 | Nbins: 30
+Y(row) range: +0.000000e+00 : +1.344000e-03 | step: 5.000000e-05 | Nbins: 27
+Z(dpt) range: -2.000000e-03 : +2.500000e-03 | step: 8.999999e-05 | Nbins: 50
+Alpide digitization params:
+Continuous readout             : OFF
+Readout Frame Length(ns)       : 6000.000000
+Strobe delay (ns)              : 6000.000000
+Strobe length (ns)             : 100.000000
+Threshold (N electrons)        : 150
+Min N electrons to accoint     : 15
+Number of charge sharing steps : 7
+ELoss to N electrons factor    : 2.777778e+08
+Noise level per pixel          : 1.000000e-07
+Charge time-response:
+o2::ITSMFT::AlpideSignalTrapezoid | Duration: 7500.0 MaxRiseTime: 1100.0 (RiseTime=0 at q=450.0) (ns)
+[INFO] CREATING BRANCH ITSDigit
+[INFO] Creating branch for ITSDigit with address 0xa6485f0
+[INFO] CREATING BRANCH ITSDigitMCTruth
+[INFO] Creating branch for ITSDigitMCTruth with address 0xa648628
+[INFO] FairRunAna::Run() After checking, the run will run from event 0 to 100.
+[INFO] Digitizing ITS hits of entry 0 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 1 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 2 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 3 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 4 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 5 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 6 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 7 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 8 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 9 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 10 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 11 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 12 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 13 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 14 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 15 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 16 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 17 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 18 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 19 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 20 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 21 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 22 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 23 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 24 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 25 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 26 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 27 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 28 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 29 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 30 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 31 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 32 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 33 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 34 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 35 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 36 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 37 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 38 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 39 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 40 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 41 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 42 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 43 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 44 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 45 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 46 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 47 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 48 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 49 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 50 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 51 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 52 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 53 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 54 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 55 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 56 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 57 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 58 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 59 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 60 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 61 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 62 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 63 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 64 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 65 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:1 
+[INFO] Digitizing ITS hits of entry 66 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 67 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 68 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 69 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 70 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 71 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 72 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 73 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 74 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 75 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 76 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 77 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 78 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 79 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 80 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 81 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 82 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 83 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 84 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 85 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 86 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 87 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 88 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 89 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 90 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 91 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 92 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 93 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 94 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 95 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 96 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 97 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 98 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+[INFO] Digitizing ITS hits of entry 99 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
+[INFO] Filling ITS digits output for RO frames 0:0 
+
+
+<DartMeasurement name="MaxMemory" type="numeric/double">327.211</DartMeasurement>
+<DartMeasurement name="CpuLoad" type="numeric/double">1.00502</DartMeasurement>
+
+
+Macro finished succesfully
+
+
+Output file is itsdigits.root
+Real time 0.318403 s, CPU time 0.32s
+

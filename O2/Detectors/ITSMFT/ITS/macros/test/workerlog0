@@ -1,0 +1,1639 @@
+[INFO] tcp://localhost:25053
+[INFO] tcp://localhost:25054
+[INFO] Waiting for configuration answer 
+[INFO] Configuration answer received, containing 1032 bytes 
+[INFO] COMMUNICATED ENGINE TGeant3
+[INFO] Setting up the simulation ...
+[INFO] RNG INITIAL SEED 1769142644
+[WARN] FairRun::SetOutputFile() deprecated. Use FairRootFileSink.
+[INFO] Media file used: /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/share/Detectors/Geometry/media.geo
+[INFO] MagneticField::CreateField: Maximim possible beam energy for requested beam is assumed
+[INFO] MagneticField::Print: Maps:
+[INFO] MagneticField::Print: Solenoid (-1*)5 kG, Dipole ON (-1) 
+[INFO] MagneticField::Print: Machine B fields for p-p  beam (7000 GeV): QGrad: 22.0002 Dipole: 37.8781
+[INFO] MagneticField::Print: Uses Sol30_Dip6_Hole  of $(O2_ROOT)/share/Common/maps/mfchebKGI_sym.root
+[INFO] Activating PIPE module
+[INFO] Activating ITS module
+[INFO] L# 0 Phi:16.42 R:2.34 Nst:12 Nunit:9 W:1.5 Tilt:-17.503 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 1 Phi:12.18 R:3.15 Nst:16 Nunit:9 W:1.5 Tilt:-17.9445 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 2 Phi:9.55 R:3.93 Nst:20 Nunit:9 W:1.5 Tilt:-16.9423 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 3 Phi:0 R:19.6 Nst:24 Nunit:4 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 4 Phi:0 R:24.55 Nst:30 Nunit:4 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 5 Phi:0 R:34.39 Nst:42 Nunit:7 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] L# 6 Phi:0 R:39.34 Nst:48 Nunit:7 Lthick:0.005 Dthick:0.003 DetID:0 B:0
+[INFO] O2RUNSIM SPECIFIC INIT CALLED
+[INFO] FairRootFileSink initialized.
+[INFO]  - cbmroot
+[INFO]     - o2sim_30900.root
+Info in <TGeoManager::TGeoManager>: Geometry FAIRGeom, FAIR geometry created
+[INFO] FairGeoMedia: Read media 
+[INFO] MagFieldContFact::createContainer: Creating mag.field container MagFieldParam
+[INFO] Setting up G3 sim from library code 
+-I- G3Config: Geant3 with TGeo has been created.
+SetCuts Macro: Setting Processes..
+[INFO] Set default settings for processes and cuts.
+[INFO] Special process settings are enabled.
+[INFO] Special cut settings are enabled.
+[INFO] Initialising primary generator
+[INFO] Setting interaction diamond: position = {0,0,0} cm
+[INFO] Setting interaction diamond: width = {0,0,0} cm
+[INFO] Setting up CAVE without ZDC
+Info in <TGeoManager::SetTopVolume>: Top volume is cave. Master volume is cave
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+Info in <TGeoManager::CheckGeometry>: Fixing runtime shapes...
+Info in <TGeoManager::CheckGeometry>: ...Nothing to fix
+Info in <TGeoManager::CloseGeometry>: Counting nodes...
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CloseGeometry>: Building cache...
+Info in <TGeoManager::CountLevels>: max level = 8, max placements = 108
+Info in <TGeoManager::CloseGeometry>: 179073 nodes/ 298 volume UID's in FAIR geometry
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+[INFO] TGeometry will not be imported to VMC
+
+Warning in <TGeoManager::CloseGeometry>: geometry already closed
+[INFO] FairMCApplication::InitGeometry: 0
+[INFO] Simulation RunID: 1551349740
+[INFO] CREATING BRANCH ITSHit
+[INFO] Creating branch for ITSHit with address 0x7c58640
+[INFO] CREATING BRANCH IndexedTrackRefs
+[INFO] Creating branch for IndexedTrackRefs with address 0x846ef28
+[INFO] CREATING BRANCH MCTrack
+[INFO] Creating branch for MCTrack with address 0x846ee90
+[INFO] CREATING BRANCH TrackRefs
+[INFO] Creating branch for TrackRefs with address 0x846ef20
+[INFO] Monte Carlo Engine Initialisation with: TGeant3TGeo
+Warning in <TGeoManager::CloseGeometry>: geometry already closed
+[INFO] Add ITS alignable volumes
+Info in <TGeoManager::Export>: Exporting FAIRGeom FAIR geometry as root file. Optimizations streamed.
+[INFO] ***  FairBaseParSet written to ROOT file   version: 1
+[INFO] ***  FairGeoParSet written to ROOT file   version: 1
+[INFO] ***  MagFieldParam written to ROOT file   version: 1
+--------------------------------------------------------------------------------
+--------------  actual containers in runtime database  -------------------------
+FairBaseParSet                                 class for parameter io
+FairGeoParSet                                  class for Geo parameter
+MagFieldParam                                  Mag. Field Parameters
+--------------  runs, versions  ------------------------------------------------
+run id
+  container                                        1st-inp    2nd-inp    output
+run: 1551349740
+  FairBaseParSet                                1551349740         -1          1
+  FairGeoParSet                                 1551349740         -1          1
+  MagFieldParam                                         -1         -1          1
+--------------  input/output  --------------------------------------------------
+first input: none
+second input: none
+output:
+OBJ: FairParRootFile	o2sim_30900_par.root	 : 0 at: 0xa37f9f0
+Root file I/O o2sim_30900_par.root is open
+detector I/Os:  FairGenericParIo
+Run: 1551349740
+Fill:      0
+Period: 
+LHC State: 
+Start: Thu Feb 28 11:29:01 2019
+End  : Thu Feb 28 11:29:02 2019
+Beam0: Z:A =   0:  0, Energy = 0.000
+Beam1: Z:A =   0:  0, Energy = 0.000
+sqrt[s]    = 0.000
+crossing angle (radian) = 0.000000e+00
+magnet currents (A) L3 = 0.000, Dipole = 0
+Detectors: Cont.RO Triggers
+      ITS:    -       -    
+VMC: 0x8472270
+[INFO] Init: Real time 2.03674 s, CPU time 2s
+[INFO] Init: Memory used 314.855 MB
+[INFO] MEM-STAMP END OF SIM INIT314.855 314.871 MB
+
+[INFO] Running with 12 sim workers 
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 0
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 0
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 1
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 1
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Answer received, containing 2064 bytes  
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 2
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 2
+[INFO] Processing 10 
+[INFO] Processing 10 
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Generate primaries 10
+
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 3
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 3
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 4
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 4
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 5
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 5
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Processing 10 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Generate primaries 10
+
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 6
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 6
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] -- OBJ PTR -- 0x7fb22c1aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5044 steps
+[INFO] TIME-STAMP 0.0470469	
+[INFO] MEM-STAMP 227.438 227.578 MB
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] -- OBJ PTR -- 0x7fb2389aa0d0 
+[INFO] sending message with 6 parts
+[INFO] Processing 10 
+[INFO] This event/chunk did 5254 steps
+[INFO] TIME-STAMP 0.0417891	
+[INFO] MEM-STAMP 227.32 227.496 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 7
+[INFO] SEGMENTCOUNT 8
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 7
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 8
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] -- OBJ PTR -- 0x7fb2131aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6433 steps
+[INFO] TIME-STAMP 0.0619681	
+[INFO] MEM-STAMP 227.469 227.578 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 9
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 9
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[STATE] Starting FairMQ state machine
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 10
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 10
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[STATE] Starting FairMQ state machine
+[INFO] Answer received, containing 2064 bytes  
+[STATE] Entering IDLE state
+[INFO] OCCUPYING A SEGMENT IN A SHARED REGION
+[INFO] FOUND ID TO ATTACH 43810817
+[INFO] TRYING ADDRESS 0x7fb2131aa000
+[INFO] SEGMENTCOUNT 11
+[INFO] SHARED MEM OCCUPIED AT ID 43810817 AND SEGMENT COUNTER 11
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 33 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Generate primaries 10
+
+[INFO] -- OBJ PTR -- 0x7fb21f9aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 7865 steps
+[INFO] Stack: 10 out of 37 stored 
+
+[INFO] TIME-STAMP 0.103297	
+[INFO] Stack: 10 out of 19 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa100 
+[INFO] MEM-STAMP 227.703 227.848 MB
+
+[INFO] sending message with 6 parts
+[INFO] Found nonconforming detector CAVE 
+[INFO] Requesting work 
+[INFO] Stack: 10 out of 16 stored 
+
+[INFO] This event/chunk did 5922 steps
+[INFO] Waiting for answer 
+[INFO] TIME-STAMP 0.092	
+[INFO] -- OBJ PTR -- 0x7fb2131aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6327 steps
+[INFO] TIME-STAMP 0.107394	
+[INFO] MEM-STAMP 227.609 227.617 MB
+
+[INFO] MEM-STAMP 227.859 227.871 MB
+
+[INFO] Requesting work 
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Waiting for answer 
+[INFO] -- OBJ PTR -- 0x7fb2451aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4845 steps
+[INFO] TIME-STAMP 0.0765331	
+[INFO] MEM-STAMP 227.625 227.773 MB
+
+[INFO] Requesting work 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Waiting for answer 
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] -- OBJ PTR -- 0x7fb25e1aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4996 steps
+[INFO] TIME-STAMP 0.069617	
+[INFO] MEM-STAMP 227.523 227.641 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb22c1aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5715 steps
+[INFO] TIME-STAMP 0.113005	
+[INFO] MEM-STAMP 227.617 227.621 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 12 out of 19 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] -- OBJ PTR -- 0x7fb2839aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 7368 steps
+[INFO] TIME-STAMP 0.0587671	
+[INFO] MEM-STAMP 227.707 227.852 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Stack: 19 out of 26 stored 
+
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] -- OBJ PTR -- 0x7fb2519aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 14358 steps
+[INFO] TIME-STAMP 0.100871	
+[INFO] MEM-STAMP 227.633 227.773 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 16 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] -- OBJ PTR -- 0x7fb2901aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6038 steps
+[INFO] TIME-STAMP 0.0739522	
+[INFO] MEM-STAMP 227.609 227.711 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] -- OBJ PTR -- 0x7fb2771aa0d0 
+[INFO] sending message with 6 parts
+[INFO] -- OBJ PTR -- 0x7fb29c9aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4844 steps
+[INFO] This event/chunk did 4991 steps
+[INFO] TIME-STAMP 0.0632601	
+[INFO] TIME-STAMP 0.0876122	
+[INFO] MEM-STAMP 227.516 227.547 MB
+
+[INFO] MEM-STAMP 227.48 227.629 MB
+
+[INFO] Requesting work 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Processing 10 
+[INFO] Waiting for answer 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb25e1aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4785 steps
+[INFO] TIME-STAMP 0.110068	
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5208 steps
+[INFO] TIME-STAMP 0.135605	
+[INFO] MEM-STAMP 227.871 227.879 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] MEM-STAMP 227.641 227.668 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 11 out of 29 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2451aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 7666 steps
+[INFO] TIME-STAMP 0.127683	
+[INFO] MEM-STAMP 227.773 227.852 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2839aa100 
+[INFO] sending message with 6 parts
+[INFO] Stack: 10 out of 29 stored 
+
+[INFO] This event/chunk did 5010 steps
+[INFO] TIME-STAMP 0.0982561	
+[INFO] MEM-STAMP 227.852 227.879 MB
+
+[INFO] -- OBJ PTR -- 0x7fb2131aa0a0 
+[INFO] Requesting work 
+[INFO] sending message with 6 parts
+[INFO] Waiting for answer 
+[INFO] This event/chunk did 10198 steps
+[INFO] TIME-STAMP 0.165289	
+[INFO] MEM-STAMP 227.785 227.836 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb22c1aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4616 steps
+[INFO] TIME-STAMP 0.16101	
+[INFO] MEM-STAMP 227.621 227.629 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 11 out of 30 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb21f9aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5713 steps
+[INFO] TIME-STAMP 0.178546	
+[INFO] MEM-STAMP 227.902 227.906 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2519aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5491 steps
+[INFO] TIME-STAMP 0.153935	
+[INFO] MEM-STAMP 227.773 227.805 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 11 out of 13 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb29c9aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 7206 steps
+[INFO] TIME-STAMP 0.113471	
+[INFO] MEM-STAMP 227.648 227.672 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2451aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4931 steps
+[INFO] TIME-STAMP 0.167919	
+[INFO] MEM-STAMP 227.852 227.863 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb25e1aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4754 steps
+[INFO] Answer received, containing 2064 bytes  
+[INFO] TIME-STAMP 0.160188	
+[INFO] Processing 10 
+[INFO] MEM-STAMP 227.668 227.676 MB
+
+[INFO] Generate primaries 10
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2131aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4720 steps
+[INFO] TIME-STAMP 0.202378	
+[INFO] MEM-STAMP 227.836 227.836 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 13 out of 22 stored 
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] -- OBJ PTR -- 0x7fb2389aa0d0 
+[INFO] Generate primaries 10
+
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6207 steps
+[INFO] TIME-STAMP 0.188057	
+[INFO] MEM-STAMP 227.922 227.922 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 11 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2901aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5209 steps
+[INFO] TIME-STAMP 0.136158	
+[INFO] MEM-STAMP 227.742 227.742 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 11 out of 12 stored 
+
+[INFO] Stack: 10 out of 18 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2519aa0a0 
+[INFO] sending message with 6 parts
+[INFO] -- OBJ PTR -- 0x7fb29c9aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4577 steps
+[INFO] This event/chunk did 4784 steps
+[INFO] TIME-STAMP 0.202886	
+[INFO] TIME-STAMP 0.152517	
+[INFO] MEM-STAMP 227.805 227.812 MB
+
+[INFO] MEM-STAMP 227.883 227.938 MB
+
+[INFO] Requesting work 
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2451aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5385 steps
+[INFO] TIME-STAMP 0.2095	
+[INFO] MEM-STAMP 227.863 227.867 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2131aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5132 steps
+[INFO] TIME-STAMP 0.242217	
+[INFO] MEM-STAMP 227.836 227.836 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb25e1aa0d0 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 17 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2771aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 18412 steps
+[INFO] TIME-STAMP 0.183728	
+[INFO] MEM-STAMP 227.691 227.703 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 10 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb21f9aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4911 steps
+[INFO] TIME-STAMP 0.24093	
+[INFO] MEM-STAMP 227.906 227.914 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4770 steps
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] TIME-STAMP 0.205263	
+[INFO] Generate primaries 10
+
+[INFO] MEM-STAMP 227.676 227.676 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 15 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5889 steps
+[INFO] TIME-STAMP 0.231583	
+[INFO] MEM-STAMP 227.926 227.926 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2839aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5418 steps
+[INFO] TIME-STAMP 0.181947	
+[INFO] MEM-STAMP 227.887 227.887 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 21 out of 37 stored 
+
+[INFO] Found nonconforming detector CAVE 
+[INFO] -- OBJ PTR -- 0x7fb26a9aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 18249 steps
+[INFO] TIME-STAMP 0.191922	
+[INFO] MEM-STAMP 315.66 315.676 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2519aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4894 steps
+[INFO] TIME-STAMP 0.242397	
+[INFO] MEM-STAMP 227.812 227.812 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb29c9aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5400 steps
+[INFO] TIME-STAMP 0.193424	
+[INFO] MEM-STAMP 227.938 227.938 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2131aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4857 steps
+[INFO] TIME-STAMP 0.280102	
+[INFO] MEM-STAMP 227.836 227.836 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 12 out of 32 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb22c1aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 14421 steps
+[INFO] TIME-STAMP 0.274056	
+[INFO] MEM-STAMP 227.941 227.941 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 17 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4890 steps
+[INFO] TIME-STAMP 0.269227	
+[INFO] MEM-STAMP 227.926 227.93 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 11 out of 13 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2839aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4806 steps
+[INFO] TIME-STAMP 0.220925	
+[INFO] MEM-STAMP 227.887 227.887 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 11 out of 15 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2901aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6086 steps
+[INFO] TIME-STAMP 0.218988	
+[INFO] MEM-STAMP 227.742 227.75 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 11 out of 34 stored 
+
+[INFO] Stack: 16 out of 32 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb25e1aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6757 steps
+[INFO] TIME-STAMP 0.25972	
+[INFO] -- OBJ PTR -- 0x7fb21f9aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 8143 steps
+[INFO] TIME-STAMP 0.296674	
+[INFO] MEM-STAMP 227.918 227.918 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] MEM-STAMP 227.941 228.004 MB
+
+[INFO] Requesting work 
+[INFO] Generate primaries 10
+
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2519aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4769 steps
+[INFO] TIME-STAMP 0.279207	
+[INFO] MEM-STAMP 227.812 227.812 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb22c1aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4430 steps
+[INFO] TIME-STAMP 0.30944	
+[INFO] MEM-STAMP 227.941 227.941 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 22 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb29c9aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5325 steps
+[INFO] TIME-STAMP 0.234726	
+[INFO] MEM-STAMP 227.938 227.957 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4893 steps
+[INFO] TIME-STAMP 0.307826	
+[INFO] MEM-STAMP 227.93 227.93 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 19 out of 55 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2451aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 13946 steps
+[INFO] TIME-STAMP 0.293825	
+[INFO] MEM-STAMP 227.902 227.941 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 30 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb26a9aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5778 steps
+[INFO] TIME-STAMP 0.27383	
+[INFO] Stack: 22 out of 52 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2771aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 15554 steps
+[INFO] TIME-STAMP 0.2785	
+[INFO] MEM-STAMP 227.98 228.031 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 15 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb21f9aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5914 steps
+[INFO] TIME-STAMP 0.339119	
+[INFO] MEM-STAMP 227.918 227.918 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] MEM-STAMP 315.676 315.68 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2131aa0d0 
+[INFO] sending message with 6 parts
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 26 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb22c1aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5010 steps
+[INFO] TIME-STAMP 0.346825	
+[INFO] MEM-STAMP 227.941 227.98 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] This event/chunk did 4553 steps
+[INFO] TIME-STAMP 0.355118	
+[INFO] MEM-STAMP 227.836 227.836 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 16 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb29c9aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4807 steps
+[INFO] TIME-STAMP 0.272622	
+[INFO] MEM-STAMP 227.957 227.973 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 20 out of 53 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2839aa100 
+[INFO] sending message with 6 parts
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] This event/chunk did 11659 steps
+[INFO] TIME-STAMP 0.299493	
+[INFO] MEM-STAMP 228.012 228.012 MB
+
+[INFO] -- OBJ PTR -- 0x7fb2901aa0d0 
+[INFO] Requesting work 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4785 steps
+[INFO] Waiting for answer 
+[INFO] TIME-STAMP 0.294646	
+[INFO] MEM-STAMP 227.75 227.75 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2771aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4793 steps
+[INFO] TIME-STAMP 0.316259	
+[INFO] MEM-STAMP 228.031 228.031 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6319 steps
+[INFO] TIME-STAMP 0.361776	
+[INFO] MEM-STAMP 227.93 227.973 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 17 out of 52 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2519aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 9672 steps
+[INFO] TIME-STAMP 0.350677	
+[INFO] MEM-STAMP 227.852 227.898 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 12 out of 42 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2451aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 7780 steps
+[INFO] TIME-STAMP 0.356757	
+[INFO] MEM-STAMP 227.941 227.949 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 11 out of 25 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb21f9aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6130 steps
+[INFO] TIME-STAMP 0.388027	
+[INFO] MEM-STAMP 227.918 227.922 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 21 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb29c9aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5412 steps
+[INFO] TIME-STAMP 0.313351	
+[INFO] MEM-STAMP 227.973 227.98 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 12 out of 26 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb22c1aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 8330 steps
+[INFO] TIME-STAMP 0.401204	
+[INFO] MEM-STAMP 227.988 227.988 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 10 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2771aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4711 steps
+[INFO] TIME-STAMP 0.353505	
+[INFO] MEM-STAMP 228.031 228.031 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 15 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6057 steps
+[INFO] TIME-STAMP 0.405247	
+[INFO] MEM-STAMP 227.973 227.973 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2519aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4733 steps
+[INFO] TIME-STAMP 0.387563	
+[INFO] MEM-STAMP 227.898 227.898 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 11 out of 31 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2131aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 10997 steps
+[INFO] TIME-STAMP 0.432405	
+[INFO] MEM-STAMP 227.836 227.883 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2901aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4903 steps
+[INFO] TIME-STAMP 0.36676	
+[INFO] MEM-STAMP 227.75 227.75 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2839aa0a0 
+[INFO] sending message with 6 parts
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb22c1aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4741 steps
+[INFO] TIME-STAMP 0.439359	
+[INFO] MEM-STAMP 227.988 227.988 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 16 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2771aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4904 steps
+[INFO] TIME-STAMP 0.392481	
+[INFO] MEM-STAMP 228.031 228.055 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] This event/chunk did 5127 steps
+[INFO] TIME-STAMP 0.386755	
+[INFO] MEM-STAMP 228.012 228.012 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 11 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4928 steps
+[INFO] TIME-STAMP 0.443345	
+[INFO] MEM-STAMP 227.973 227.973 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] Stack: 11 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2451aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 10437 steps
+[INFO] -- OBJ PTR -- 0x7fb2519aa100 
+[INFO] sending message with 6 parts
+[INFO] TIME-STAMP 0.429777	
+[INFO] This event/chunk did 5102 steps
+[INFO] TIME-STAMP 0.427528	
+[INFO] MEM-STAMP 227.949 227.949 MB
+
+[INFO] Requesting work 
+[INFO] MEM-STAMP 227.898 227.898 MB
+
+[INFO] Waiting for answer 
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Stack: 12 out of 15 stored 
+
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] -- OBJ PTR -- 0x7fb29c9aa100 
+[INFO] sending message with 6 parts
+[INFO] Answer received, containing 2064 bytes  
+[INFO] This event/chunk did 8340 steps
+[INFO] Processing 10 
+[INFO] TIME-STAMP 0.377802	
+[INFO] Generate primaries 10
+
+[INFO] MEM-STAMP 227.98 227.98 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 11 out of 18 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2131aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4889 steps
+[INFO] TIME-STAMP 0.474266	
+[INFO] MEM-STAMP 227.883 227.891 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb26a9aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 10181 steps
+[INFO] TIME-STAMP 0.418505	
+[INFO] MEM-STAMP 315.68 315.688 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb22c1aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5777 steps
+[INFO] TIME-STAMP 0.483736	
+[INFO] MEM-STAMP 227.988 227.988 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 13 out of 45 stored 
+
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb25e1aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 13267 steps
+[INFO] -- OBJ PTR -- 0x7fb2519aa0a0 
+[INFO] TIME-STAMP 0.459076	
+[INFO] sending message with 6 parts
+[INFO] MEM-STAMP 228.008 228.047 MB
+
+[INFO] This event/chunk did 4833 steps
+[INFO] Requesting work 
+[INFO] TIME-STAMP 0.465896	
+[INFO] Waiting for answer 
+[INFO] MEM-STAMP 227.898 227.898 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 23 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6661 steps
+[INFO] TIME-STAMP 0.48929	
+[INFO] MEM-STAMP 227.973 227.977 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 17 out of 32 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2771aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 8007 steps
+[INFO] TIME-STAMP 0.455398	
+[INFO] MEM-STAMP 228.055 228.062 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Stack: 14 out of 22 stored 
+
+[INFO] Generate primaries 10
+
+[INFO] -- OBJ PTR -- 0x7fb2451aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 7200 steps
+[INFO] TIME-STAMP 0.484619	
+[INFO] MEM-STAMP 227.949 227.949 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 20 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2901aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5744 steps
+[INFO] TIME-STAMP 0.445525	
+[INFO] Answer received, containing 2064 bytes  
+[INFO] MEM-STAMP 227.75 227.965 MB
+
+[INFO] Processing 10 
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 17 out of 21 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb29c9aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6931 steps
+[INFO] TIME-STAMP 0.434466	
+[INFO] MEM-STAMP 227.98 227.996 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 26 out of 72 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb21f9aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 18327 steps
+[INFO] TIME-STAMP 0.518888	
+[INFO] MEM-STAMP 227.938 227.953 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Answer received, containing 2064 bytes  
+[INFO] Processing 10 
+[INFO] Generate primaries 10
+
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2519aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4556 steps
+[INFO] TIME-STAMP 0.501298	
+[INFO] MEM-STAMP 227.898 227.898 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 24 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb25e1aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5658 steps
+[INFO] TIME-STAMP 0.502619	
+[INFO] MEM-STAMP 228.047 228.059 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 13 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb26a9aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4807 steps
+[INFO] TIME-STAMP 0.487246	
+[INFO] MEM-STAMP 315.688 315.688 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 14 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2389aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 5559 steps
+[INFO] TIME-STAMP 0.532643	
+[INFO] MEM-STAMP 227.977 227.977 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 10 out of 27 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2451aa0a0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 6104 steps
+[INFO] TIME-STAMP 0.517832	
+[INFO] MEM-STAMP 227.949 227.98 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 17 out of 31 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2839aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 7447 steps
+[INFO] TIME-STAMP 0.485519	
+[INFO] MEM-STAMP 228.012 228.039 MB
+
+[INFO] Requesting work 
+[INFO] Stack: 10 out of 12 stored 
+
+[INFO] Waiting for answer 
+[INFO] -- OBJ PTR -- 0x7fb2771aa100 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 4792 steps
+[INFO] TIME-STAMP 0.492916	
+[INFO] MEM-STAMP 228.062 228.062 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 16 out of 40 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2131aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 11968 steps
+[INFO] TIME-STAMP 0.56017	
+[INFO] MEM-STAMP 227.953 227.961 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 18 out of 39 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb22c1aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 12337 steps
+[INFO] TIME-STAMP 0.553089	
+[INFO] MEM-STAMP 227.988 228.016 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] Stack: 13 out of 37 stored 
+
+[INFO] -- OBJ PTR -- 0x7fb2901aa0d0 
+[INFO] sending message with 6 parts
+[INFO] This event/chunk did 7970 steps
+[INFO] TIME-STAMP 0.508628	
+[INFO] MEM-STAMP 227.965 228.043 MB
+
+[INFO] Requesting work 
+[INFO] Waiting for answer 
+[INFO] simulation is done
+[INFO] simulation is done
+[INFO] simulation is done
+[INFO] simulation is done
+[INFO] simulation is done
+[INFO] simulation is done
+[INFO] simulation is done
+[INFO] simulation is done
+[INFO] simulation is done
+[INFO] simulation is done
+[INFO] simulation is done

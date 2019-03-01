@@ -1,0 +1,68 @@
+
+Thread 5 (Thread 0x7fde137fe700 (LWP 2604)):
+#0  0x00007fde2b027483 in epoll_wait () from /lib64/libc.so.6
+#1  0x00007fde25210e27 in zmq::epoll_t::loop() () from /data/zhaozhong/alice/sw/slc7_x86-64/ZeroMQ/v4.1.5-12/lib/libzmq.so.5
+#2  0x00007fde2523b450 in thread_routine () from /data/zhaozhong/alice/sw/slc7_x86-64/ZeroMQ/v4.1.5-12/lib/libzmq.so.5
+#3  0x00007fde3bc32dd5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fde2b026ead in clone () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7fde13fff700 (LWP 2603)):
+#0  0x00007fde2b027483 in epoll_wait () from /lib64/libc.so.6
+#1  0x00007fde25210e27 in zmq::epoll_t::loop() () from /data/zhaozhong/alice/sw/slc7_x86-64/ZeroMQ/v4.1.5-12/lib/libzmq.so.5
+#2  0x00007fde2523b450 in thread_routine () from /data/zhaozhong/alice/sw/slc7_x86-64/ZeroMQ/v4.1.5-12/lib/libzmq.so.5
+#3  0x00007fde3bc32dd5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fde2b026ead in clone () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7fde18849700 (LWP 2602)):
+#0  0x00007fde3bc39e3d in nanosleep () from /lib64/libpthread.so.0
+#1  0x00007fde2d03075f in std::this_thread::sleep_for<long, std::ratio<1l, 1000l> > (__rtime=...) at /data/zhaozhong/alice/sw/slc7_x86-64/GCC-Toolchain/v7.3.0-alice1-7/include/c++/7.3.0/thread:376
+#2  fair::mq::plugins::Control::SignalHandler (this=0x4fd14f0) at /data/zhaozhong/alice/sw/SOURCES/FairMQ/v1.3.8/v1.3.8/fairmq/plugins/Control.cxx:316
+#3  0x00007fde2b8d0f3f in std::execute_native_thread_routine (__p=0x4fcddc0) at ../../../../../gcc/libstdc++-v3/src/c++11/thread.cc:83
+#4  0x00007fde3bc32dd5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fde2b026ead in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7fde1904a700 (LWP 2601)):
+#0  0x00007fde3bc36d12 in pthread_cond_timedwait
+
+GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fde2d02e2bb in __gthread_cond_timedwait (__abs_timeout=0x7fde19043f70, __mutex=<optimized out>, __cond=0x4fd1620) at /data/zhaozhong/alice/sw/slc7_x86-64/GCC-Toolchain/v7.3.0-alice1-7/include/c++/7.3.0/x86_64-unknown-linux-gnu/bits/gthr-default.h:871
+#2  std::condition_variable::__wait_until_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l> > > (__atime=..., __lock=..., this=0x4fd1620) at /data/zhaozhong/alice/sw/slc7_x86-64/GCC-Toolchain/v7.3.0-alice1-7/include/c++/7.3.0/condition_variable:166
+#3  std::condition_variable::wait_until<std::chrono::duration<long, std::ratio<1l, 1000000000l> > > (__atime=..., __lock=..., this=0x4fd1620) at /data/zhaozhong/alice/sw/slc7_x86-64/GCC-Toolchain/v7.3.0-alice1-7/include/c++/7.3.0/condition_variable:106
+#4  std::condition_variable::wait_for<long, std::ratio<1l, 1000l> > (__rtime=..., __lock=..., this=0x4fd1620) at /data/zhaozhong/alice/sw/slc7_x86-64/GCC-Toolchain/v7.3.0-alice1-7/include/c++/7.3.0/condition_variable:138
+#5  fair::mq::plugins::Control::WaitForNextState (this=this
+entry=0x4fd14f0) at /data/zhaozhong/alice/sw/SOURCES/FairMQ/v1.3.8/v1.3.8/fairmq/plugins/Control.cxx:266
+#6  0x00007fde2d02e418 in fair::mq::plugins::Control::RunStartupSequence (this=this
+entry=0x4fd14f0) at /data/zhaozhong/alice/sw/SOURCES/FairMQ/v1.3.8/v1.3.8/fairmq/plugins/Control.cxx:389
+#7  0x00007fde2d0303d9 in fair::mq::plugins::Control::StaticMode (this=0x4fd14f0) at /data/zhaozhong/alice/sw/SOURCES/FairMQ/v1.3.8/v1.3.8/fairmq/plugins/Control.cxx:284
+#8  0x00007fde2b8d0f3f in std::execute_native_thread_routine (__p=0x4fd27e0) at ../../../../../gcc/libstdc++-v3/src/c++11/thread.cc:83
+#9  0x00007fde3bc32dd5 in start_thread () from /lib64/libpthread.so.0
+#10 0x00007fde2b026ead in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7fde3f181080 (LWP 2484)):
+#0  0x00007fde2afeda89 in waitpid () from /lib64/libc.so.6
+#1  0x00007fde2af6bde2 in do_system () from /lib64/libc.so.6
+#2  0x00007fde2af6c191 in system () from /lib64/libc.so.6
+#3  0x00007fde3ec95fcd in TUnixSystem::Exec (shellcmd=<optimized out>, this=0x141a590) at /build/workarea/sw/20155975/1/SOURCES/ROOT/v6-14-04/v6-14-04/core/unix/src/TUnixSystem.cxx:2119
+#4  TUnixSystem::StackTrace (this=0x141a590) at /build/workarea/sw/20155975/1/SOURCES/ROOT/v6-14-04/v6-14-04/core/unix/src/TUnixSystem.cxx:2413
+#5  0x00007fde3df254c3 in FairLogger::LogFatalMessage () at /data/zhaozhong/alice/sw/SOURCES/FairRoot/c672f280ec/c672f280ec8382cb2dc10b85c5fa4e64e13c5975/fairtools/FairLogger.cxx:210
+#6  0x00007fde2c8d86bc in std::function<void ()>::operator()() const (this=0x7fde2cae2640 <fair::Logger::fFatalCallback>) at /build/workarea/sw/20155956/1/slc7_x86-64/GCC-Toolchain/v7.3.0-alice1-7/include/c++/7.3.0/bits/std_function.h:706
+#7  fair::Logger::~Logger (this=0x7ffc945ccb80, __in_chrg=<optimized out>) at /build/workarea/sw/20155956/1/SOURCES/FairLogger/v1.2.0/v1.2.0/logger/Logger.cxx:695
+#8  0x00007fde2f59654a in o2::ITSMFT::DigitPixelReader::openInput (this=this
+entry=0x4fcfda0, inpName=..., det=...) at /data/zhaozhong/alice/sw/SOURCES/O2/1.0.0/0/Detectors/ITSMFT/common/reconstruction/src/DigitPixelReader.cxx:86
+#9  0x00007fde39808a0d in HisAnalyzerSpec::init (this=0x370d980, ic=...) at /data/zhaozhong/alice/sw/SOURCES/O2/1.0.0/0/Detectors/ITSMFT/ITS/QCWorkFlow/src/HisAnalyzerSpec.cxx:198
+#10 0x00007fde39809836 in o2::framework::AlgorithmSpec o2::framework::adaptFromTask<HisAnalyzerSpec>()::{lambda(o2::framework::InitContext&)#1}::operator()(o2::framework::InitContext&) const (ic=..., __closure=0x4fcf300) at /data/zhaozhong/alice/sw/SOURCES/O2/1.0.0/0/Framework/Core/include/Framework/Task.h:50
+#11 std::_Function_handler<std::function<void (o2::framework::ProcessingContext&)> (o2::framework::InitContext&), o2::framework::AlgorithmSpec o2::framework::adaptFromTask<HisAnalyzerSpec>()::{lambda(o2::framework::InitContext&)#1}>::_M_invoke(std::_Any_data const&, o2::framework::InitContext&) (__functor=..., __args#0=...) at /data/zhaozhong/alice/sw/slc7_x86-64/GCC-Toolchain/v7.3.0-alice1-7/include/c++/7.3.0/bits/std_function.h:302
+#12 0x00007fde34d41aa9 in std::function<std::function<void (o2::framework::ProcessingContext&)> (o2::framework::InitContext&)>::operator()(o2::framework::InitContext&) const (__args#0=..., this=0x4fcb478) at /data/zhaozhong/alice/sw/slc7_x86-64/GCC-Toolchain/v7.3.0-alice1-7/include/c++/7.3.0/bits/std_function.h:706
+#13 o2::framework::DataProcessingDevice::Init (this=0x4fcb1c0) at /data/zhaozhong/alice/sw/SOURCES/O2/1.0.0/0/Framework/Core/src/DataProcessingDevice.cxx:122
+#14 0x00007fde2cfce55b in FairMQDevice::InitWrapper (this=0x4fcb1c0) at /data/zhaozhong/alice/sw/SOURCES/FairMQ/v1.3.8/v1.3.8/fairmq/FairMQDevice.cxx:189
+#15 0x00007fde2cfdb497 in std::function<void ()>::operator()() const (this=0x4fcf988) at /data/zhaozhong/alice/sw/slc7_x86-64/GCC-Toolchain/v7.3.0-alice1-7/include/c++/7.3.0/bits/std_function.h:706
+#16 fair::mq::fsm::Machine_::ProcessWork (this=0x4fcf920) at /data/zhaozhong/alice/sw/SOURCES/FairMQ/v1.3.8/v1.3.8/fairmq/FairMQStateMachine.cxx:392
+#17 FairMQStateMachine::ProcessWork (this=this
+entry=0x4fcb1c0) at /data/zhaozhong/alice/sw/SOURCES/FairMQ/v1.3.8/v1.3.8/fairmq/FairMQStateMachine.cxx:656
+#18 0x00007fde2cfb13e4 in FairMQDevice::RunStateMachine (this=<optimized out>) at /data/zhaozhong/alice/sw/SOURCES/FairMQ/v1.3.8/v1.3.8/fairmq/FairMQDevice.h:393
+#19 fair::mq::DeviceRunner::Run (this=this
+entry=0x7ffc945cf710) at /data/zhaozhong/alice/sw/SOURCES/FairMQ/v1.3.8/v1.3.8/fairmq/DeviceRunner.cxx:101
+#20 0x00007fde34daee19 in doChild (argc=<optimized out>, argv=<optimized out>, spec=...) at /data/zhaozhong/alice/sw/SOURCES/O2/1.0.0/0/Framework/Core/src/runDataProcessing.cxx:672
+#21 0x00007fde34db00ee in runStateMachine (workflow=..., driverControl=..., driverInfo=..., metricsInfos=..., frameworkId=...) at /data/zhaozhong/alice/sw/SOURCES/O2/1.0.0/0/Framework/Core/src/runDataProcessing.cxx:795
+#22 0x00007fde34db3523 in doMain (argc=29, argv=0x7ffc945d1588, workflow=..., channelPolicies=..., completionPolicies=..., workflowOptions=..., configContext=...) at /data/zhaozhong/alice/sw/SOURCES/O2/1.0.0/0/Framework/Core/src/runDataProcessing.cxx:1130
+#23 0x000000000041d37b in main (argc=<optimized out>, argv=<optimized out>) at /data/zhaozhong/alice/sw/SOURCES/O2/1.0.0/0/Framework/Core/include/Framework/runDataProcessing.h:120

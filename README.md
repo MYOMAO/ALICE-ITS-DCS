@@ -1,0 +1,3 @@
+THis is the software for ALICE ITS Quality Control. It contains two parts. The O2 and Quality Control. 
+
+In O2, we have created a workflow to digitizer data and generate histograms. However, currently, there is still output file when we generate the histogram. Following, Yura's suggestion, I have created a joint DIGI-RECO workflow called ITSDIGIRECOWorkFlow. However, there are some compilation errors. This package is fully compiled but when we try to compile with ITSDIGIRECOWorkFlow (uncomment the addsubdirectory(ITSDIGIRECOWorkFlow) CMakeList.txt under /data/zhaozhong/alice/sw/SOURCES/O2/1.0.0/0/Detectors/ITSMFT/ITS/. The compilation fails. I will need some help for debugging this issue. 
