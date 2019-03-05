@@ -70,7 +70,7 @@ namespace o2
 				~SkeletonTask() override;
 				inline void setDigits (std::vector < o2::ITSMFT::Digit > *dig);
 				std::vector<o2::ITSMFT::Digit> mDigitsArray;                     
-/				std::vector<o2::ITSMFT::Digit>* mDigitsArrayPtr = &mDigitsArray; 
+				std::vector<o2::ITSMFT::Digit>* mDigitsArrayPtr = &mDigitsArray; 
 				UInt_t getCurrROF() const { return mCurrROF; }
 				void setNChips(int n)
 				{
@@ -100,7 +100,7 @@ namespace o2
 				std::vector<ChipPixelData> mChipsOld;
 				o2::ITSMFT::PixelReader* mReader = nullptr; 
 				std::unique_ptr<o2::ITSMFT::DigitPixelReader> mReaderMC;    
-				std::unique_ptr<o2::ITSMFT::RawPixelReader<o2::ITSMFT::ChipMappingITS>> mReaderRaw; 
+//				std::unique_ptr<o2::ITSMFT::RawPixelReader<o2::ITSMFT::ChipMappingITS>> mReaderRaw; 
 				UInt_t mCurrROF = o2::ITSMFT::PixelData::DummyROF; 
 				int* mCurr; // pointer on the 1st row of currently processed mColumnsX
 				int* mPrev; // pointer on the 1st row of previously processed mColumnsX
