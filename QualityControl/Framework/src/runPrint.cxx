@@ -34,6 +34,8 @@
 /// of glfw being installed or not, in the terminal all the logs will be shown as well.
 
 #include "Framework/DataSampling.h"
+
+
 using namespace o2::framework;
 void customize(std::vector<CompletionPolicy>& policies)
 {
@@ -43,8 +45,7 @@ void customize(std::vector<ChannelConfigurationPolicy>& policies)
 {
 	DataSampling::CustomizeInfrastructure(policies);
 }
-#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/QCWorkFlow/include/ITSQCWorkflow/HisAnalyzerSpec.h"
-#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/QCWorkFlow/src/HisAnalyzerSpec.cxx"
+
 #include <FairLogger.h>
 #include <TH1F.h>
 #include <memory>
@@ -54,6 +55,26 @@ void customize(std::vector<ChannelConfigurationPolicy>& policies)
 
 #include "QualityControl/Checker.h"
 #include "QualityControl/InfrastructureGenerator.h"
+#include "DetectorsBase/Propagator.h"
+#include "Framework/WorkflowSpec.h"
+#include "Framework/ConfigParamSpec.h"
+#include "Framework/CompletionPolicy.h"
+#include "Framework/DeviceSpec.h"
+#include "DetectorsCommonDataFormats/DetID.h"
+#include "Framework/runDataProcessing.h"
+
+
+
+#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/ITSDIGIRECOWorkFlow/include/ITSDIGIRECOWorkflow/DIGIRECOWorkFlow.h"
+//#include "ITSDIGIRECOWorkflow/HisAnalyzerSpec.h"
+/*
+#include "/data/zhaozhong/alice/O2/Steer/DigitizerWorkflow/src/ITSMFTDigitizerSpec.h"
+#include "/data/zhaozhong/alice/O2/Steer/DigitizerWorkflow/src/ITSMFTDigitWriterSpec.h"
+#include "/data/zhaozhong/alice/O2/Steer/DigitizerWorkflow/src/ITSMFTDigitWriterSpec.cxx"
+#include "/data/zhaozhong/alice/O2/Steer/DigitizerWorkflow/src/ITSMFTDigitizerSpec.cxx"
+*/
+#include "DetectorsBase/GeometryManager.h"
+#include "ITSBase/GeometryTGeo.h"
 
 using namespace o2;
 using namespace o2::framework;
@@ -62,25 +83,48 @@ using namespace std::chrono;
 
 WorkflowSpec defineDataProcessing(ConfigContext const&)
 {
+
 	WorkflowSpec specs;
-	// The producer to generate some data in the workflow
 
-	specs.emplace_back(o2::ITS::getHisAnalyzerSpec());
 
-	const std::string qcConfigurationSource = std::string("json://") + getenv("QUALITYCONTROL_ROOT") + "/etc/basic.json";
+	const std::string qcConfigurationSource = std::string("json://") + getenv("QUALITYCONTROL_ROOT") + "/etc/Print.json";
+/*
+	int fanoutsize = 0;
+	
+	std::vector<o2::detectors::DetID> detList;
+	detList.emplace_back(o2::detectors::DetID::ITS);
+	// connect the ITS digitization
+	specs.emplace_back(o2::ITSMFT::getITSDigitizerSpec(fanoutsize++));
+	//  specs.emplace_back(o2::ITS::getDigitReaderSpec());
+	specs.emplace_back(o2::ITSMFT::getITSDigitWriterSpec());
+*/
 	LOG(INFO) << "Using config file '" << qcConfigurationSource << "'";
+
+	LOG(INFO) << "START INFRASTRUCTURE ";
 
 	// Generation of Data Sampling infrastructure
 	DataSampling::GenerateInfrastructure(specs, qcConfigurationSource);
 
+
+	LOG(INFO) << "DONE INFRASTRUCTURE ";
+
+	std::string	detStrL = "its";
 	// Generation of the QC topology (one task, one checker in this case)
 	quality_control::generateRemoteInfrastructure(specs, qcConfigurationSource);
 
+	LOG(INFO) << "START PRINTING PROCESS NOW ";
+	o2::Base::GeometryManager::loadGeometry();
 	// Finally the printer
 	DataProcessorSpec printer{
 		"printer",
 			Inputs{
-				{ "checked-mo", "QC", Checker::createCheckerDataDescription("QcTask"), 0 }
+				/*
+				InputSpec{ "digits", "ITS", "DIGITS", 0, Lifetime::Timeframe },
+				InputSpec{ "labels", "ITS", "DIGITSMCTR", 0, Lifetime::Timeframe },
+				InputSpec{ "ROframes", "ITS", "ITSDigitROF", 0, Lifetime::Timeframe },
+				InputSpec{ "MC2ROframes", "ITS", "ITSDigitMC2ROF", 0, Lifetime::Timeframe },
+				*/
+				{ "checked-mo", "QC", Checker::createCheckerDataDescription("ITSQcTask"), 0 }
 			},
 			Outputs{},
 			AlgorithmSpec{
@@ -92,20 +136,32 @@ WorkflowSpec defineDataProcessing(ConfigContext const&)
 
 						for (const auto& to : *moArray) {
 							MonitorObject* mo = dynamic_cast<MonitorObject*>(to);
+							LOG(INFO) << " Object Name Bro = " << mo->getName();
+							
+							//if (mo->getName() == "ChipStave," || mo->getName() == "ChipStave") {
+								auto* g = dynamic_cast<TH1D*>(mo->getObject());
+									LOG(INFO) << " Pass 1 ";
 
-							if (mo->getName() == "example") {
-								auto* g = dynamic_cast<TH1F*>(mo->getObject());
 								std::string bins = "BINS:";
+											LOG(INFO) << " Pass 2 ";
+								LOG(INFO)	<< "NBins =" <<	 g->GetNbinsX();
 								for (int i = 0; i < g->GetNbinsX(); i++) {
 									bins += " " + std::to_string((int) g->GetBinContent(i));
 								}
+								LOG(INFO) << " Pass 3 ";
+
 								LOG(INFO) << bins;
-							}
+							//}
 						}
 					};
 				}
+			},
+			Options{
+			//	{ "its-digit-infile", VariantType::String, "itsdigits.root", { "Name of the input file" } }
+			{ (detStrL + "-digit-outfile").c_str(), VariantType::String, (detStrL + "digits.root").c_str(), { "Name of the input file" } }
 			}
 	};
+
 	specs.push_back(printer);
 
 	return specs;

@@ -1,5 +1,5 @@
 ///
-/// \file   SkeletonTask.cxx
+/// \file   ITSQCTask.cxx
 /// \author Barthelemy von Haller
 /// \author Piotr Konopka
 ///
@@ -29,7 +29,7 @@
 
 
 #include "QualityControl/QcInfoLogger.h"
-#include "Skeleton/SkeletonTask.h"
+#include "ITSQCTask/ITSQCTask.h"
 
 
 
@@ -48,12 +48,12 @@ namespace o2
 {
 	namespace quality_control_modules
 	{
-		namespace skeleton
+		namespace itsqctask
 		{
 
 			//		o2::Base::GeometryManager::loadGeometry();
 
-			SkeletonTask::SkeletonTask() : TaskInterface(), mHistogram(nullptr) { 
+			ITSQCTask::ITSQCTask() : TaskInterface(), mHistogram(nullptr) { 
 				mHistogram = nullptr;
 				gSystem->Load("/data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSBase.so");
 				gSystem->Load("/data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSSimulation.so");
@@ -69,17 +69,17 @@ namespace o2
 				cout << "Clear " << endl;
 			}
 
-			SkeletonTask::~SkeletonTask() {
+			ITSQCTask::~ITSQCTask() {
 				if (mHistogram) {
 					delete mHistogram;
 				}
 			}
 
-			void SkeletonTask::initialize(o2::framework::InitContext& ctx)
+			void ITSQCTask::initialize(o2::framework::InitContext& ctx)
 			{
 
 
-				QcInfoLogger::GetInstance() << "initialize SkeletonTask" << AliceO2::InfoLogger::InfoLogger::endm;
+				QcInfoLogger::GetInstance() << "initialize ITSQCTask" << AliceO2::InfoLogger::InfoLogger::endm;
 
 				//auto filename = ctx.options().get < std::string > ("itsdigits.root");
 
@@ -153,16 +153,16 @@ namespace o2
 
 				QcInfoLogger::GetInstance() << "WE FUCKING START PUBLISHING NOW BRO IT WORK BRO!!!" << AliceO2::InfoLogger::InfoLogger::endm;
 
-				getObjectsManager()->startPublishing(ChipStave);
-				getObjectsManager()->addCheck(ChipStave, "checkFromSkeleton", "o2::quality_control_modules::skeleton::SkeletonCheck","QcSkeleton");
+				getObjectsManager()->startPublishing(ChipProj);
+				getObjectsManager()->addCheck(ChipProj, "checkFromITSQCTask", "o2::quality_control_modules::itsqctask::ITSQCCheck","QcITSQCTask");
 
 				mHistogram = new TH1F("example", "example", 20, 0, 30000);
-				getObjectsManager()->startPublishing(mHistogram);
-				getObjectsManager()->addCheck(mHistogram, "checkFromSkeleton", "o2::quality_control_modules::skeleton::SkeletonCheck","QcSkeleton");
+		//	getObjectsManager()->startPublishing(mHistogram);
+		//		getObjectsManager()->addCheck(mHistogram, "checkFromITSQCTask", "o2::quality_control_modules::itsqctask::ITSQCCheck","QcITSQCTask");
 				QcInfoLogger::GetInstance() << "DONE BRO!!!" << AliceO2::InfoLogger::InfoLogger::endm;
 			}
 
-			void SkeletonTask::process (PixelReader & reader)
+			void ITSQCTask::process (PixelReader & reader)
 			{
 
 
@@ -210,18 +210,18 @@ namespace o2
 
 
 
-			void SkeletonTask::startOfActivity(Activity& activity)
+			void ITSQCTask::startOfActivity(Activity& activity)
 			{
 				QcInfoLogger::GetInstance() << "startOfActivity" << AliceO2::InfoLogger::InfoLogger::endm;
 				mHistogram->Reset();
 			}
 
-			void SkeletonTask::startOfCycle()
+			void ITSQCTask::startOfCycle()
 			{
 				QcInfoLogger::GetInstance() << "startOfCycle" << AliceO2::InfoLogger::InfoLogger::endm;
 			}
 
-			void SkeletonTask::monitorData(o2::framework::ProcessingContext& ctx)
+			void ITSQCTask::monitorData(o2::framework::ProcessingContext& ctx)
 			{
 				// In this function you can access data inputs specified in the JSON config file, for example:
 				//  {
@@ -269,17 +269,17 @@ namespace o2
 				//   LOG(INFO) << "String is " << s->GetString().Data();
 			}
 
-			void SkeletonTask::endOfCycle()
+			void ITSQCTask::endOfCycle()
 			{
 				QcInfoLogger::GetInstance() << "endOfCycle" << AliceO2::InfoLogger::InfoLogger::endm;
 			}
 
-			void SkeletonTask::endOfActivity(Activity& activity)
+			void ITSQCTask::endOfActivity(Activity& activity)
 			{
 				QcInfoLogger::GetInstance() << "endOfActivity" << AliceO2::InfoLogger::InfoLogger::endm;
 			}
 
-			void SkeletonTask::reset()
+			void ITSQCTask::reset()
 			{
 				// clean all the monitor objects here
 
@@ -287,7 +287,7 @@ namespace o2
 				mHistogram->Reset();
 			}
 
-		} // namespace skeleton
+		} // namespace itsqctask
 	} // namespace quality_control_modules
 } // namespace o2
 

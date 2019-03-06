@@ -156,9 +156,9 @@ namespace o2
 				getObjectsManager()->startPublishing(ChipStave);
 				getObjectsManager()->addCheck(ChipStave, "checkFromSkeleton", "o2::quality_control_modules::skeleton::SkeletonCheck","QcSkeleton");
 
-				mHistogram = new TH1F("example", "example", 20, 0, 30000);
-				getObjectsManager()->startPublishing(mHistogram);
-				getObjectsManager()->addCheck(mHistogram, "checkFromSkeleton", "o2::quality_control_modules::skeleton::SkeletonCheck","QcSkeleton");
+				//mHistogram = new TH1F("example", "example", 20, 0, 30000);
+				//getObjectsManager()->startPublishing(mHistogram);
+				//getObjectsManager()->addCheck(mHistogram, "checkFromSkeleton", "o2::quality_control_modules::skeleton::SkeletonCheck","QcSkeleton");
 				QcInfoLogger::GetInstance() << "DONE BRO!!!" << AliceO2::InfoLogger::InfoLogger::endm;
 			}
 
