@@ -10,7 +10,7 @@
 //#include "/home/alidock/alice/O2/Detectors/ITSMFT/common/simulation/include/ITSMFTSimulation/Digitizer.h"
 //#include "/home/alidock/alice/O2/Detectors/ITSMFT/ITS/base/include/ITSBase/GeometryTGeo.h"
 #include "FairRootManager.h"	
-#include "../include/ITSQCWorkflow/HisAnalyzerSpec.h"
+#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/QCWorkFlow/include/ITSQCWorkflow/HisAnalyzerSpec.h"
 
 #include "Framework/ControlService.h"
 //#include "ITSWorkflow/ClustererSpec.h"
@@ -72,8 +72,8 @@ o2::framework;
 
 HisAnalyzerSpec::HisAnalyzerSpec ()
 {
-	gStyle->SetOptFit (0);
-	gStyle->SetOptStat (0);
+	//gStyle->SetOptFit (0);
+	//gStyle->SetOptStat (0);
 	o2::Base::GeometryManager::loadGeometry ();
 
 	ChipStave->GetXaxis ()->SetTitle ("Chip ID");
@@ -127,8 +127,19 @@ void HisAnalyzerSpec::run (o2::framework::ProcessingContext & pc)
 */
 	//              
 
-	//cout << "Have BEEN HERE" << endl;
-	pc.services().get<ControlService>().readyToQuit(true);
+	cout << "Have BEEN HERE" << endl;
+  auto digits = pc.inputs().get<const std::vector<o2::ITSMFT::Digit>>("digits");
+  auto labels = pc.inputs().get<const o2::dataformats::MCTruthContainer<o2::MCCompLabel>*>("labels");
+  auto rofs = pc.inputs().get<const std::vector<o2::ITSMFT::ROFRecord>>("ROframes");
+  auto mc2rofs = pc.inputs().get<const std::vector<o2::ITSMFT::MC2ROFRecord>>("MC2ROframes");
+
+  LOG(INFO) << "ITSClusterer pulled " << digits.size() << " digits, "
+            << labels->getIndexedSize() << " MC label objects, in "
+            << rofs.size() << " RO frames and "
+            << mc2rofs.size() << " MC events";
+
+  	pc.services().get<ControlService>().readyToQuit(true);
+
 }
 
 void HisAnalyzerSpec::init (InitContext & ic)
@@ -322,8 +333,13 @@ namespace o2
 		{
 			o2::Base::GeometryManager::loadGeometry();
 			return DataProcessorSpec{
-				"its-digit-reader",
-					Inputs{},
+				"its-Histogrammer",
+					//Inputs{},
+					Inputs{
+						InputSpec{ "digits", "ITS", "DIGITS", 0, Lifetime::Timeframe },
+						InputSpec{ "labels", "ITS", "DIGITSMCTR", 0, Lifetime::Timeframe },
+						InputSpec{ "ROframes", "ITS", "ITSDigitROF", 0, Lifetime::Timeframe },
+						InputSpec{ "MC2ROframes", "ITS", "ITSDigitMC2ROF", 0, Lifetime::Timeframe } },
 					Outputs{
 					},
 					AlgorithmSpec{ adaptFromTask<HisAnalyzerSpec>() },

@@ -12,7 +12,8 @@
 
 #include "ITSQCWorkflow/QCWorkFlow.h"
 #include "ITSQCWorkflow/HisAnalyzerSpec.h"
-
+#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/include/ITSWorkflow/DigitReaderSpec.h"
+#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/src/DigitReaderSpec.cxx"
 namespace o2
 {
 	namespace ITS
@@ -25,6 +26,7 @@ namespace o2
 			{
 				framework::WorkflowSpec specs;
 		
+				specs.emplace_back(o2::ITS::getDigitReaderSpec());
 			        specs.emplace_back(o2::ITS::getHisAnalyzerSpec());
 
 				return specs;

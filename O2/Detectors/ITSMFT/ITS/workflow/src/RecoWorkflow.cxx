@@ -31,9 +31,9 @@ framework::WorkflowSpec getWorkflow()
 {
   framework::WorkflowSpec specs;
 
-//  specs.emplace_back(o2::ITS::getDigitReaderSpec());
+  specs.emplace_back(o2::ITS::getDigitReaderSpec());
   specs.emplace_back(o2::ITS::getClustererSpec());
-//  specs.emplace_back(o2::ITS::getClusterWriterSpec());
+  specs.emplace_back(o2::ITS::getClusterWriterSpec());
   //specs.emplace_back(o2::ITS::getTrackerSpec());
   specs.emplace_back(o2::ITS::getCookedTrackerSpec());
   specs.emplace_back(o2::ITS::getTrackWriterSpec());

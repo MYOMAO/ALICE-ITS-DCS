@@ -19,7 +19,7 @@
 #include "SimReaderSpec.h"
 #include "CollisionTimePrinter.h"
 #include "DetectorsCommonDataFormats/DetID.h"
-
+#include "Framework/runDataProcessing.h"
 
 
 #include "ITSDIGIRECOWorkflow/DIGIRECOWorkFlow.h"
@@ -44,10 +44,10 @@ namespace o2
 			{
 				framework::WorkflowSpec specs;
 				int fanoutsize = 0;
-	//			std::vector<o2::detectors::DetID> detList;
-	//			detList.emplace_back(o2::detectors::DetID::ITS);
+				std::vector<o2::detectors::DetID> detList;
+				detList.emplace_back(o2::detectors::DetID::ITS);
 				// connect the ITS digitization
-	//			specs.emplace_back(o2::ITSMFT::getITSDigitizerSpec(fanoutsize++));
+				specs.emplace_back(o2::ITSMFT::getITSDigitizerSpec(fanoutsize++));
 				//  specs.emplace_back(o2::ITS::getDigitReaderSpec());
 				specs.emplace_back(o2::ITS::getClustererSpec());
 				//  specs.emplace_back(o2::ITS::getClusterWriterSpec());

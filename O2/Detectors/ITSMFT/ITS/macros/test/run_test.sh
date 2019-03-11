@@ -1,5 +1,5 @@
 #Number of events to simulate 
-nEvents=100
+nEvents=10 
 
 #To activate the continuos readout, assign a positive value to the rate
 rate=0. #50.e3(Hz)

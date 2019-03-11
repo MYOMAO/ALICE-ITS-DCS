@@ -10,6 +10,7 @@
 
 
 #include "Framework/runDataProcessing.h"
+#include "../../src/runDataProcessing.h"
 
 #include "ITSDIGIRECOWorkflow/DIGIRECOWorkFlow.h"
 #include "DIGIRECOWorkFlow.cxx"

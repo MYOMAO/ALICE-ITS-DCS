@@ -92,7 +92,7 @@ In file included from /data/zhaozhong/alice/sw/slc7_x86-64/FairRoot/c672f280ec-1
 [INFO] Parameter and input file are available, Assure that basic info is there for the run!
 
 ************************************************************* 
-     initialisation for run id 1551261254
+     initialisation for run id 1552090533
 ************************************************************* 
 -I- FairRunTimeDB::InitContainer() FairGeoParSet
 Info in <TGeoManager::CloseGeometry>: Geometry loaded from file...
@@ -108,7 +108,7 @@ Container FairBaseParSet initialized from ROOT file.
 [INFO] MagFieldContFact::createContainer: Creating mag.field container MagFieldParam
 
 ************************************************************* 
-     initialisation for run id 1551261254
+     initialisation for run id 1552090533
 ************************************************************* 
 -I- FairRunTimeDB::InitContainer() FairGeoParSet
 -I- FairRunTimeDB::InitContainer() FairBaseParSet
@@ -138,9 +138,9 @@ Noise level per pixel          : 1.000000e-07
 Charge time-response:
 o2::ITSMFT::AlpideSignalTrapezoid | Duration: 7500.0 MaxRiseTime: 1100.0 (RiseTime=0 at q=450.0) (ns)
 [INFO] CREATING BRANCH ITSDigit
-[INFO] Creating branch for ITSDigit with address 0xa6485f0
+[INFO] Creating branch for ITSDigit with address 0xaa706b0
 [INFO] CREATING BRANCH ITSDigitMCTruth
-[INFO] Creating branch for ITSDigitMCTruth with address 0xa648628
+[INFO] Creating branch for ITSDigitMCTruth with address 0xaa706e8
 [INFO] FairRunAna::Run() After checking, the run will run from event 0 to 100.
 [INFO] Digitizing ITS hits of entry 0 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
 [INFO] Filling ITS digits output for RO frames 0:0 
@@ -273,7 +273,7 @@ o2::ITSMFT::AlpideSignalTrapezoid | Duration: 7500.0 MaxRiseTime: 1100.0 (RiseTi
 [INFO] Digitizing ITS hits of entry 64 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
 [INFO] Filling ITS digits output for RO frames 0:0 
 [INFO] Digitizing ITS hits of entry 65 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
-[INFO] Filling ITS digits output for RO frames 0:1 
+[INFO] Filling ITS digits output for RO frames 0:0 
 [INFO] Digitizing ITS hits of entry 66 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
 [INFO] Filling ITS digits output for RO frames 0:0 
 [INFO] Digitizing ITS hits of entry 67 from source 0 at time 0 (TOff.= 0 ROFrame= 0) cont.mode: 0 Min/Max ROFrames 0/0 
@@ -344,13 +344,13 @@ o2::ITSMFT::AlpideSignalTrapezoid | Duration: 7500.0 MaxRiseTime: 1100.0 (RiseTi
 [INFO] Filling ITS digits output for RO frames 0:0 
 
 
-<DartMeasurement name="MaxMemory" type="numeric/double">327.211</DartMeasurement>
-<DartMeasurement name="CpuLoad" type="numeric/double">1.00502</DartMeasurement>
+<DartMeasurement name="MaxMemory" type="numeric/double">327.992</DartMeasurement>
+<DartMeasurement name="CpuLoad" type="numeric/double">0.957647</DartMeasurement>
 
 
 Macro finished succesfully
 
 
 Output file is itsdigits.root
-Real time 0.318403 s, CPU time 0.32s
+Real time 0.271499 s, CPU time 0.26s
 

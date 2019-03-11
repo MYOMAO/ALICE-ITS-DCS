@@ -10,10 +10,10 @@
 #ifndef FRAMEWORK_RUN_DATA_PROCESSING_H
 #define FRAMEWORK_RUN_DATA_PROCESSING_H
 
-#include "ChannelConfigurationPolicy.h"
-#include "CompletionPolicy.h"
-#include "ConfigParamsHelper.h"
-#include "DataProcessorSpec.h"
+#include "Framework/ChannelConfigurationPolicy.h"
+#include "Framework/CompletionPolicy.h"
+#include "Framework/ConfigParamsHelper.h"
+#include "Framework/DataProcessorSpec.h"
 #include "Framework/WorkflowSpec.h"
 #include "Framework/ConfigContext.h"
 #include "Framework/BoostOptionsRetriever.h"
@@ -44,9 +44,7 @@ using Options = std::vector<ConfigParamSpec>;
 ///
 /// @returns a std::vector of DataProcessorSpec which represents the actual workflow
 ///         to be executed
-
 o2::framework::WorkflowSpec defineDataProcessing(o2::framework::ConfigContext const&context);
-//std::vector<DataProcessorSpec> defineDataProcessing(ConfigContext const&)
 
 // This template magic allow users to customize the behavior of the process
 // by (optionally) implementing a `configure` method which modifies one of the
@@ -65,11 +63,9 @@ o2::framework::WorkflowSpec defineDataProcessing(o2::framework::ConfigContext co
 // By default we leave the channel policies unchanged. Notice that the default still include
 // a "match all" policy which uses pub / sub
 // FIXME: add a debug statement saying that the default policy was used?
- void defaultConfiguration(std::vector<o2::framework::ChannelConfigurationPolicy>& channelPolicies) {}
- void defaultConfiguration(std::vector<o2::framework::ConfigParamSpec> &globalWorkflowOptions) {}
- void defaultConfiguration(std::vector<o2::framework::CompletionPolicy> &completionPolicies) {}
-
-using namespace o2::framework;
+void defaultConfiguration(std::vector<o2::framework::ChannelConfigurationPolicy>& channelPolicies) {}
+void defaultConfiguration(std::vector<o2::framework::ConfigParamSpec> &globalWorkflowOptions) {}
+void defaultConfiguration(std::vector<o2::framework::CompletionPolicy> &completionPolicies) {}
 
 struct UserCustomizationsHelper {
   template <typename T>
@@ -119,7 +115,7 @@ int main(int argc, char** argv)
   std::unique_ptr<ParamRetriever> retriever{new BoostOptionsRetriever(workflowOptions, true, argc, argv)};
   ConfigParamRegistry workflowOptionsRegistry(std::move(retriever));
   ConfigContext configContext{workflowOptionsRegistry};
-  o2::framework::WorkflowSpec specs =  defineDataProcessing(configContext);
+  o2::framework::WorkflowSpec specs = defineDataProcessing(configContext);
 
   auto result = doMain(argc, argv, specs, channelPolicies, completionPolicies, workflowOptions, configContext);
   LOG(INFO) << "Process " << getpid() << " is exiting.";
