@@ -30,6 +30,7 @@ void customize(std::vector<ConfigParamSpec>& workflowOptions)
 #include "Framework/DataSpecUtils.h"
 #include "Framework/ParallelContext.h"
 #include "Framework/ControlService.h"
+#include "Framework/ReadoutAdapter.h"
 
 #include "FairMQLogger.h"
 
@@ -42,22 +43,22 @@ DataProcessorSpec templateProcessor()
   return DataProcessorSpec{
     "some-processor",
     {
-      InputSpec{ "x", "TST", "A", 0, Lifetime::Timeframe },
+      InputSpec{ "x", "ITS", "RAWDATA", 0, Lifetime::Timeframe },
     },
     {
       OutputSpec{ "TST", "P", 0, Lifetime::Timeframe },
     },
-    // The producer is stateful, we use a static for the state in this
-    // particular case, but a Singleton or a captured new object would
-    // work as well.
+    // The processor is stateful. We want to call srand only
+    // once, and then return the callback to be invoked for every message.
     AlgorithmSpec{ [](InitContext& setup) {
       srand(setup.services().get<ParallelContext>().index1D());
-      return [](ProcessingContext& ctx) {
+      return adaptStateless([](ParallelContext& parallelInfo, InputRecord& inputs, DataAllocator& outputs) {
+        auto values = inputs.get("x");
         // Create a single output.
-        size_t index = ctx.services().get<ParallelContext>().index1D();
-        auto aData = ctx.outputs().make<int>(Output{ "TST", "P", index }, 1);
-        sleep(rand() % 5);
-      };
+        size_t index = parallelInfo.index1D();
+        LOG(INFO) << reinterpret_cast<DataHeader const*>(values.header)->payloadSize;
+        auto aData = outputs.make<int>(Output{ "TST", "P", index }, 1);
+      });
     } }
   };
 }
@@ -77,40 +78,30 @@ WorkflowSpec defineDataProcessing(ConfigContext const& config)
   size_t jobs = config.options().get<int>("2-layer-jobs");
   size_t stages = config.options().get<int>("3-layer-pipelining");
 
-  // This is an example of how we can parallelize by subSpec.
-  // templatedProducer will be instanciated N times and the lambda function
-  // passed to the parallel statement will be applied to each one of the
-  // instances in order to modify it. Parallel will also make sure the name of
-  // the instance is amended from "some-producer" to "some-producer-<index>".
-  // This is to simulate processing of different input channels in parallel on
-  // the FLP.
-  // FIXME: actually connect to Readout.
-  WorkflowSpec workflow = parallel(templateProcessor(), jobs, [](DataProcessorSpec& spec, size_t index) {
-    DataSpecUtils::updateMatchingSubspec(spec.inputs[0], index);
-    spec.outputs[0].subSpec = index;
-  });
-
   /// The proxy is the component which is responsible to connect to readout and
   /// extract the data from it. Depending on the configuration, it will
   /// create as many outputs as the different subspecification / channels
-  /// which will be read by the readout.
-  std::vector<OutputSpec> outputSpecs;
-  for (size_t ssi = 0; ssi < jobs; ++ssi) {
-    outputSpecs.emplace_back("TST", "A", ssi);
-  }
+  /// which will be read by the readout. You can configure
+  /// the channel configuration on command line via:
+  ///
+  /// '--channel-config "name=readout-proxy,type=pair,method=connect,address=ipc:///tmp/readout-pipe-0,rateLogging=1"'
+  DataProcessorSpec readoutProxy = specifyExternalFairMQDeviceProxy(
+    "readout-proxy",
+    Outputs{ { "ITS", "RAWDATA" } },
+    "type=pair,method=connect,address=ipc:///tmp/readout-pipe-0,rateLogging=1,transport=shmem",
+    readoutAdapter({ "ITS", "RAWDATA" }));
 
-  DataProcessorSpec proxy{
-    "proxy",
-    {},
-    outputSpecs,
-    AlgorithmSpec{ [jobs](InitContext& initCtx) {
-      return [jobs](ProcessingContext& ctx) {
-        for (size_t ji = 0; ji < jobs; ++ji) {
-          ctx.outputs().make<int>(Output{ "TST", "A", ji }, 1);
-        }
-      };
-    } }
-  };
+  // This is an example of how we can parallelize by subSpec.
+  // templatedProcessor will be instanciated N times and the lambda function
+  // passed to the parallel statement will be applied to each one of the
+  // instances in order to modify it. Parallel will also make sure the name of
+  // the instance is amended from "some-processor" to "some-processor-<index>".
+  // This is to simulate processing of different input channels in parallel on
+  // the FLP.
+  auto dataParallelLayer = parallel(templateProcessor(), jobs, [](DataProcessorSpec& spec, size_t index) {
+    DataSpecUtils::updateMatchingSubspec(spec.inputs[0], index);
+    spec.outputs[0].subSpec = index;
+  });
 
   // This is a set of processor which will be able to process consistent
   // timeslices on the FLP. I.e. time units where all the channels are
@@ -123,10 +114,10 @@ WorkflowSpec defineDataProcessing(ConfigContext const& config)
                   [](InputSpec& input, size_t index) {
                     DataSpecUtils::updateMatchingSubspec(input, index);
                   }),
-      { OutputSpec{ { "out" }, "TST", "M" } },
+      { OutputSpec{ { "label" }, "TST", "merger_output" } },
       AlgorithmSpec{ [](InitContext& setup) {
         return [](ProcessingContext& ctx) {
-          ctx.outputs().make<int>(OutputRef("out", 0), 1);
+          ctx.outputs().make<int>(OutputRef("label", 0), 1);
         };
       } } },
     stages);
@@ -136,15 +127,17 @@ WorkflowSpec defineDataProcessing(ConfigContext const& config)
   // FIXME: actually connect to DataDistribution to push data somewhere else.
   DataProcessorSpec proxyOut{
     "proxyout",
-    { InputSpec{ "x", "TST", "M" } },
-    {},
+    Inputs{ InputSpec{ "x", "TST", "merger_output" } },
+    Outputs{},
     AlgorithmSpec{ [](InitContext& setup) {
       return [](ProcessingContext& ctx) {
       };
     } }
   };
 
-  workflow.emplace_back(proxy);
+  WorkflowSpec workflow;
+  workflow.emplace_back(readoutProxy);
+  workflow.insert(workflow.end(), dataParallelLayer.begin(), dataParallelLayer.end());
   workflow.emplace_back(timeParallelProcessor);
   workflow.emplace_back(proxyOut);
 

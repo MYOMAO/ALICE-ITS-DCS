@@ -308,6 +308,7 @@ o2_define_bucket(
     AliceO2::Configuration
     InfoLogger_bucket
     AliceO2::Common
+    CURL::libcurl
 
     SYSTEMINCLUDE_DIRECTORIES
     ${CMAKE_SOURCE_DIR}/Utilities/PCG/include
@@ -707,7 +708,7 @@ o2_define_bucket(
     Geom
     common_utils_bucket
     CommonUtils
-    
+
 
     INCLUDE_DIRECTORIES
     ${FAIRROOT_INCLUDE_DIR}
@@ -775,12 +776,14 @@ o2_define_bucket(
     DEPENDENCIES
     itsmft_base_bucket
     data_format_itsmft_bucket
+    configuration_bucket
     Graf
     Gpad
     DetectorsBase
     SimulationDataFormat
     ITSMFTBase
     DataFormatsITSMFT
+    SimConfig
 
     INCLUDE_DIRECTORIES
     ${CMAKE_SOURCE_DIR}/DataFormats/simulation/include
@@ -788,6 +791,7 @@ o2_define_bucket(
     ${CMAKE_SOURCE_DIR}/Common/Utils/include
     ${CMAKE_SOURCE_DIR}/Detectors/Base/include
     ${CMAKE_SOURCE_DIR}/Detectors/ITSMFT/common/base/include
+    ${CMAKE_SOURCE_DIR}/Common/SimConfig/include
 )
 
 o2_define_bucket(
@@ -942,7 +946,7 @@ o2_define_bucket(
     ${CMAKE_SOURCE_DIR}/DataFormats/simulation/include
     ${CMAKE_SOURCE_DIR}/Common/MathUtils/include
     ${CMAKE_SOURCE_DIR}/Common/Utils/include
-   
+
     SYSTEMINCLUDE_DIRECTORIES
     ${Boost_INCLUDE_DIR}
     )
@@ -1156,6 +1160,7 @@ o2_define_bucket(
     ${CMAKE_SOURCE_DIR}/DataFormats/Reconstruction/include
     ${CMAKE_SOURCE_DIR}/DataFormats/Detectors/TPC/include
     ${CMAKE_SOURCE_DIR}/DataFormats/Detectors/Common/include
+    ${CMAKE_SOURCE_DIR}/DataFormats/Headers/include
     ${MS_GSL_INCLUDE_DIR}
 )
 
@@ -1199,6 +1204,7 @@ o2_define_bucket(
     ${CMAKE_SOURCE_DIR}/Common/MathUtils/include
     ${CMAKE_SOURCE_DIR}/DataFormats/Detectors/TPC/include
     ${CMAKE_SOURCE_DIR}/DataFormats/common/include
+    ${CMAKE_SOURCE_DIR}/DataFormats/Headers/include
     ${Vc_INCLUDE_DIR}
     ${Boost_INCLUDE_DIR}
 )
@@ -1601,7 +1607,7 @@ o2_define_bucket(
     SimulationDataFormat
     CommonDataFormat
     CommonUtils
-    
+
     INCLUDE_DIRECTORIES
     ${FAIRROOT_INCLUDE_DIR}
     ${CMAKE_SOURCE_DIR}/DataFormats/simulation/include
@@ -1754,7 +1760,7 @@ o2_define_bucket(
     ${CMAKE_SOURCE_DIR}/DataFormats/simulation/include
     ${CMAKE_SOURCE_DIR}/Detectors/PHOS/base/include
     ${CMAKE_SOURCE_DIR}/Common/MathUtils/include
-   
+
 )
 
 o2_define_bucket(
@@ -1803,6 +1809,23 @@ o2_define_bucket(
 
     SYSTEMINCLUDE_DIRECTORIES
     ${ROOT_INCLUDE_DIR}
+)
+
+o2_define_bucket(
+    NAME
+    spacepoint_calib_bucket
+
+    DEPENDENCIES
+    root_base_bucket
+    fairroot_base_bucket
+    MathCore
+    Matrix
+    tpc_base_bucket
+    common_utils_bucket
+    common_math_bucket
+
+    INCLUDE_DIRECTORIES
+    ${CMAKE_SOURCE_DIR}/Detectors/TPC/calibration/SpacePoints/include
 )
 
 o2_define_bucket(
@@ -2045,7 +2068,7 @@ o2_define_bucket(
     mch_mapping_interface_bucket
     mch_mapping_impl3_bucket
     MCHMappingImpl3
-    
+
     INCLUDE_DIRECTORIES
     ${CMAKE_SOURCE_DIR}/Detectors/Base/include
     ${CMAKE_SOURCE_DIR}/DataFormats/simulation/include
@@ -2412,4 +2435,19 @@ o2_define_bucket(
     root_base_bucket
     mid_base_bucket
     MIDBase
+)
+
+o2_define_bucket(
+    NAME
+    mch_tracking_bucket
+
+    DEPENDENCIES
+    fairroot_base_bucket
+    Field
+    MCHBase
+    Framework
+
+    INCLUDE_DIRECTORIES
+    ${CMAKE_SOURCE_DIR}/Common/Field/include
+    ${CMAKE_SOURCE_DIR}/Detectors/MUON/MCH/Base/include
 )
