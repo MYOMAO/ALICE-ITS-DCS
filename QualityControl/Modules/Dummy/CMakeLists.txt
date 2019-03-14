@@ -1,15 +1,15 @@
-set(MODULE_NAME "QcITSQCTask")
+set(MODULE_NAME "QcDummy")
 
 # ---- Files ----
 
 set(SRCS
-  src/ITSQCTask.cxx
-  src/ITSQCCheck.cxx
+  src/Dummy.cxx
+  /data/zhaozhong/alice/O2/Detectors/ITSMFT/common/reconstruction/src/DigitPixelReader.cxx
 )
 
 set(HEADERS
-  include/ITSQCTask/ITSQCTask.h
-  include/ITSQCTask/ITSQCCheck.h
+  include/Dummy/Dummy.h
+  /data/zhaozhong/alice/O2/Detectors/ITSMFT/common/reconstruction/include/ITSMFTReconstruction/DigitPixelReader.h
 )
 
 # ---- Library ----
@@ -28,6 +28,13 @@ add_library( libITSReconstruction SHARED IMPORTED )
 add_library( libITSWorkflow SHARED IMPORTED )
 add_library( libITSMFTReconstruction SHARED IMPORTED )
 add_library( libITSMFTBase SHARED IMPORTED )
+add_library( libDetectorsCommonDataFormats SHARED IMPORTED )
+add_library( libGpad SHARED IMPORTED )
+add_library( libITSQCWorkFlow SHARED IMPORTED )
+add_library( libDataFormatsITSMFT SHARED IMPORTED )
+
+
+
 
 set_target_properties( libITSBase PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSBase.so )
 set_target_properties( libITSSimulation PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSSimulation.so )
@@ -35,11 +42,12 @@ set_target_properties( libITSReconstruction PROPERTIES IMPORTED_LOCATION /data/z
 set_target_properties( libITSWorkflow PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSWorkflow.so )
 set_target_properties( libITSMFTReconstruction PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSMFTReconstruction.so )
 set_target_properties( libITSMFTBase PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSMFTBase.so )
+set_target_properties( libDetectorsCommonDataFormats PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libDetectorsCommonDataFormats.so )
+set_target_properties( libGpad PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/ROOT/v6-14-04-24/lib/libGpad.so.6.14 )
+set_target_properties( libITSQCWorkFlow PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSQCWorkFlow.so )
+set_target_properties( libDataFormatsITSMFT PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libDataFormatsITSMFT.so )
 
-
-
-#target_link_libraries(${MODULE_NAME} PUBLIC QualityControl libITSBase libITSSimulation libITSReconstruction libITSWorkflow libITSMFTReconstruction libITSMFTBase)
-target_link_libraries(${MODULE_NAME} PUBLIC QualityControl libITSBase libITSSimulation libITSReconstruction libITSWorkflow libITSMFTReconstruction libITSMFTBase)
+target_link_libraries(${MODULE_NAME} PUBLIC QualityControl libITSQCWorkFlow libGpad libITSBase libITSSimulation libITSReconstruction libITSWorkflow libITSMFTReconstruction libITSMFTBase libDetectorsCommonDataFormats libDataFormatsITSMFT)
 
 install(
         TARGETS ${MODULE_NAME}
@@ -50,7 +58,7 @@ install(
 
 # ---- ROOT dictionary ----
 
-generate_root_dict(MODULE_NAME ${MODULE_NAME} LINKDEF "include/ITSQCTask/LinkDef.h" DICT_CLASS "${MODULE_NAME}Dict")
+generate_root_dict(MODULE_NAME ${MODULE_NAME} LINKDEF "include/Dummy/LinkDef.h" DICT_CLASS "${MODULE_NAME}Dict")
 
 # ---- Tests ----
 

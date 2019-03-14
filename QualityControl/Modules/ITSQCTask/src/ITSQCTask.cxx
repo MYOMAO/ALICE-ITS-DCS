@@ -24,7 +24,6 @@
 #include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/common/reconstruction/include/ITSMFTReconstruction/DigitPixelReader.h"
 #include "DetectorsBase/GeometryManager.h"
 //#include "ITSBase/GeometryTGeo.h"
-
 #include <TCanvas.h>
 
 
@@ -82,20 +81,22 @@ namespace o2
 				QcInfoLogger::GetInstance() << "initialize ITSQCTask" << AliceO2::InfoLogger::InfoLogger::endm;
 
 				//auto filename = ctx.options().get < std::string > ("itsdigits.root");
-
+				auto filename = ctx.options().get<std::string>("its-digits");
 				//std::unique_ptr<TFile> mFile = nullptr;
 				//mFile = std::make_unique<TFile>(filename.c_str(), "OLD");
 
-				//			QcInfoLogger::GetInstance() << "Input File Name is " << filename.c_str () <<  AliceO2::InfoLogger::InfoLogger::endm;
+				QcInfoLogger::GetInstance() << "Input File Name is " << filename.c_str () <<  AliceO2::InfoLogger::InfoLogger::endm;
 				QcInfoLogger::GetInstance() << "It WORK, we start plotting histograms" <<  AliceO2::InfoLogger::InfoLogger::endm;
 
-
-				std::vector<ChipPixelData> mChips;
-				std::vector<ChipPixelData> mChipsOld;
-				o2::ITSMFT::PixelReader* mReader = nullptr; 
-				std::unique_ptr<o2::ITSMFT::DigitPixelReader> mReaderMC;   
-				const std::string inpName = "itsdigits.root";
+				/*
+				   std::vector<ChipPixelData> mChips;
+				   std::vector<ChipPixelData> mChipsOld;
+				   o2::ITSMFT::PixelReader* mReader = nullptr; 
+				   std::unique_ptr<o2::ITSMFT::DigitPixelReader> mReaderMC;   
+				   const std::string inpName = "itsdigits.root";
+				   */
 				bool mRawDataMode = 0;
+
 				if (mRawDataMode)
 				{
 
@@ -122,6 +123,8 @@ namespace o2
 				QcInfoLogger::GetInstance() << "START LOOPING BRO" <<  AliceO2::InfoLogger::InfoLogger::endm;
 
 				mReaderMC->openInput ("itsdigits.root", o2::detectors::DetID ("ITS"));
+
+
 
 				while (mReaderMC->readNextEntry())
 				{
@@ -157,8 +160,13 @@ namespace o2
 				getObjectsManager()->addCheck(ChipProj, "checkFromITSQCTask", "o2::quality_control_modules::itsqctask::ITSQCCheck","QcITSQCTask");
 
 				mHistogram = new TH1F("example", "example", 20, 0, 30000);
-		//	getObjectsManager()->startPublishing(mHistogram);
-		//		getObjectsManager()->addCheck(mHistogram, "checkFromITSQCTask", "o2::quality_control_modules::itsqctask::ITSQCCheck","QcITSQCTask");
+
+				getObjectsManager()->startPublishing(ChipStave);
+				getObjectsManager()->addCheck(ChipStave, "checkFromITSQCTask", "o2::quality_control_modules::itsqctask::ITSQCCheck","QcITSQCTask");
+
+
+				//	getObjectsManager()->startPublishing(mHistogram);
+				//		getObjectsManager()->addCheck(mHistogram, "checkFromITSQCTask", "o2::quality_control_modules::itsqctask::ITSQCCheck","QcITSQCTask");
 				QcInfoLogger::GetInstance() << "DONE BRO!!!" << AliceO2::InfoLogger::InfoLogger::endm;
 			}
 
@@ -202,9 +210,6 @@ namespace o2
 				}
 
 
-
-
-
 			}
 
 
@@ -237,6 +242,19 @@ namespace o2
 				// Some examples:
 
 				// 1. In a loop
+	/*
+
+				cout << "START Here" << endl;
+				auto digits = ctx.inputs().get<const std::vector<o2::ITSMFT::Digit>>("digits");
+				auto labels = ctx.inputs().get<const o2::dataformats::MCTruthContainer<o2::MCCompLabel>*>("labels");
+				auto rofs = ctx.inputs().get<const std::vector<o2::ITSMFT::ROFRecord>>("ROframes");
+				auto mc2rofs = ctx.inputs().get<const std::vector<o2::ITSMFT::MC2ROFRecord>>("MC2ROframes");
+
+				LOG(INFO) << "ITSClusterer pulled " << digits.size() << " digits, "
+					<< labels->getIndexedSize() << " MC label objects, in "
+					<< rofs.size() << " RO frames and "
+					<< mc2rofs.size() << " MC events";
+	*/
 				for (auto&& input : ctx.inputs()) {
 					// get message header
 					const auto* header = header::get<header::DataHeader*>(input.header);

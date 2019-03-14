@@ -70,9 +70,10 @@ void customize(std::vector<ChannelConfigurationPolicy>& policies)
 #include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/include/ITSWorkflow/DigitReaderSpec.h"
 #include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/include/ITSWorkflow/RecoWorkflow.h"
 #include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/src/DigitReaderSpec.cxx"
+//#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/QCWorkFlow/include/ITSQCWorkflow/HisAnalyzerSpec.h"
+//#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/QCWorkFlow/src/HisAnalyzerSpec.cxx"
 
-
-
+#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/src/DummySpec.cxx"
 //#include "ITSDIGIRECOWorkflow/HisAnalyzerSpec.h"
 /*
 #include "/data/zhaozhong/alice/O2/Steer/DigitizerWorkflow/src/ITSMFTDigitizerSpec.h"
@@ -94,24 +95,14 @@ WorkflowSpec defineDataProcessing(ConfigContext const&)
 	WorkflowSpec specs;
 
 
-	const std::string qcConfigurationSource = std::string("json://") + getenv("QUALITYCONTROL_ROOT") + "/etc/Print.json";
-/*
-	int fanoutsize = 0;
-	
-	std::vector<o2::detectors::DetID> detList;
-	detList.emplace_back(o2::detectors::DetID::ITS);
-	// connect the ITS digitization
-	specs.emplace_back(o2::ITSMFT::getITSDigitizerSpec(fanoutsize++));
-	//  specs.emplace_back(o2::ITS::getDigitReaderSpec());
-	specs.emplace_back(o2::ITSMFT::getITSDigitWriterSpec());
-*/
-
+	const std::string qcConfigurationSource = std::string("json://") + getenv("QUALITYCONTROL_ROOT") + "/etc/PrintTest.json";
 	o2::Base::GeometryManager::loadGeometry();
 
 	LOG(INFO) << "START READER";
 
 
 	//specs.emplace_back(o2::ITS::getDigitReaderSpec());
+	//specs.emplace_back(o2::ITS::getDummySpec());
 
 	LOG(INFO) << "DONE READER";
 

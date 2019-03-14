@@ -70,8 +70,11 @@ void customize(std::vector<ChannelConfigurationPolicy>& policies)
 #include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/include/ITSWorkflow/DigitReaderSpec.h"
 #include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/include/ITSWorkflow/RecoWorkflow.h"
 #include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/src/DigitReaderSpec.cxx"
+//#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/QCWorkFlow/include/ITSQCWorkflow/HisAnalyzerSpec.h"
+//#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/QCWorkFlow/src/HisAnalyzerSpec.cxx"
 
-
+#include "/data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/workflow/src/DummySpec.cxx"
+#include "/data/zhaozhong/alice/QualityControl/Modules/Dummy/src/Dummy.cxx"
 
 //#include "ITSDIGIRECOWorkflow/HisAnalyzerSpec.h"
 /*
@@ -94,7 +97,7 @@ WorkflowSpec defineDataProcessing(ConfigContext const&)
 	WorkflowSpec specs;
 
 
-	const std::string qcConfigurationSource = std::string("json://") + getenv("QUALITYCONTROL_ROOT") + "/etc/Print.json";
+	const std::string qcConfigurationSource = std::string("json://") + getenv("QUALITYCONTROL_ROOT") + "/etc/PrintTest.json";
 /*
 	int fanoutsize = 0;
 	
@@ -111,24 +114,16 @@ WorkflowSpec defineDataProcessing(ConfigContext const&)
 	LOG(INFO) << "START READER";
 
 
-	//specs.emplace_back(o2::ITS::getDigitReaderSpec());
+	specs.emplace_back(o2::ITS::getDigitReaderSpec());
+	//specs.emplace_back(o2::ITS::getDummySpec());
 
 	LOG(INFO) << "DONE READER";
 
+	LOG(INFO) << "START QC";
 
-	LOG(INFO) << "Using config file '" << qcConfigurationSource << "'";
-
-	LOG(INFO) << "START INFRASTRUCTURE ";
-
-	// Generation of Data Sampling infrastructure
-	DataSampling::GenerateInfrastructure(specs, qcConfigurationSource);
+	specs.emplace_back(o2::quality_control_modules::dummy::getDummySpec());
 
 
-	LOG(INFO) << "DONE INFRASTRUCTURE ";
-
-	//std::string	detStrL = "its";
-	// Generation of the QC topology (one task, one checker in this case)
-	quality_control::generateRemoteInfrastructure(specs, qcConfigurationSource);
 
 	LOG(INFO) << "START PRINTING PROCESS NOW ";
 	// Finally the printer

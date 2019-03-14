@@ -1,16 +1,17 @@
-set(MODULE_NAME "QcITSQCTask")
+set(MODULE_NAME "QcITSDPLQCTask")
 
 # ---- Files ----
 
 set(SRCS
-  src/ITSQCTask.cxx
-  src/ITSQCCheck.cxx
+  src/ITSDPLQCTask.cxx
+  /data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/QCWorkFlow/src/HisAnalyzerSpec.cxx
 )
 
 set(HEADERS
-  include/ITSQCTask/ITSQCTask.h
-  include/ITSQCTask/ITSQCCheck.h
+  include/ITSDPLQCTask/ITSDPLQCTask.h
+  /data/zhaozhong/alice/O2/Detectors/ITSMFT/ITS/QCWorkFlow/include/ITSQCWorkflow/HisAnalyzerSpec.h
 )
+
 
 # ---- Library ----
 
@@ -22,12 +23,22 @@ target_include_directories(
   PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
+
 add_library( libITSBase SHARED IMPORTED )
 add_library( libITSSimulation SHARED IMPORTED )
 add_library( libITSReconstruction SHARED IMPORTED )
 add_library( libITSWorkflow SHARED IMPORTED )
 add_library( libITSMFTReconstruction SHARED IMPORTED )
 add_library( libITSMFTBase SHARED IMPORTED )
+add_library( libDetectorsCommonDataFormats SHARED IMPORTED )
+add_library( libGpad SHARED IMPORTED )
+add_library( libITSQCWorkFlow SHARED IMPORTED )
+add_library( libJupyROOT SHARED IMPORTED )
+add_library( libROOTDataFrame SHARED IMPORTED )
+add_library( libROOTVecOps SHARED IMPORTED )
+add_library( libPyROOT SHARED IMPORTED )
+
+
 
 set_target_properties( libITSBase PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSBase.so )
 set_target_properties( libITSSimulation PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSSimulation.so )
@@ -35,11 +46,20 @@ set_target_properties( libITSReconstruction PROPERTIES IMPORTED_LOCATION /data/z
 set_target_properties( libITSWorkflow PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSWorkflow.so )
 set_target_properties( libITSMFTReconstruction PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSMFTReconstruction.so )
 set_target_properties( libITSMFTBase PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSMFTBase.so )
+set_target_properties( libDetectorsCommonDataFormats PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libDetectorsCommonDataFormats.so )
+set_target_properties( libGpad PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/ROOT/v6-14-04-24/lib/libGpad.so.6.14 )
+set_target_properties( libITSQCWorkFlow PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/O2/1.0.0-1/lib/libITSQCWorkFlow.so )
+set_target_properties( libJupyROOT PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/ROOT/latest-o2/lib/libJupyROOT.so )
+set_target_properties( libROOTDataFrame PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/ROOT/latest-o2/lib/libROOTDataFrame.so )
+set_target_properties( libROOTVecOps PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/ROOT/latest-o2/lib/libROOTVecOps.so )
+set_target_properties( libPyROOT PROPERTIES IMPORTED_LOCATION /data/zhaozhong/alice/sw/slc7_x86-64/ROOT/latest-o2/lib/libPyROOT.so )
 
 
 
-#target_link_libraries(${MODULE_NAME} PUBLIC QualityControl libITSBase libITSSimulation libITSReconstruction libITSWorkflow libITSMFTReconstruction libITSMFTBase)
-target_link_libraries(${MODULE_NAME} PUBLIC QualityControl libITSBase libITSSimulation libITSReconstruction libITSWorkflow libITSMFTReconstruction libITSMFTBase)
+
+#target_link_libraries(${MODULE_NAME} PUBLIC QualityControl)
+target_link_libraries(${MODULE_NAME} PUBLIC QualityControl libJupyROOT libROOTDataFrame libROOTVecOps libPyROOT libITSQCWorkFlow libGpad libITSBase libITSSimulation libITSReconstruction libITSWorkflow libITSMFTReconstruction libITSMFTBase libDetectorsCommonDataFormats)
+
 
 install(
         TARGETS ${MODULE_NAME}
@@ -50,7 +70,7 @@ install(
 
 # ---- ROOT dictionary ----
 
-generate_root_dict(MODULE_NAME ${MODULE_NAME} LINKDEF "include/ITSQCTask/LinkDef.h" DICT_CLASS "${MODULE_NAME}Dict")
+generate_root_dict(MODULE_NAME ${MODULE_NAME} LINKDEF "include/ITSDPLQCTask/LinkDef.h" DICT_CLASS "${MODULE_NAME}Dict")
 
 # ---- Tests ----
 
