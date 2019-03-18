@@ -65,6 +65,13 @@ namespace o2
 				ChipStave->GetYaxis ()->SetTitle ("Average Number of Hits");
 				ChipStave->SetTitle ("Occupancy Projection for ITS Layer 1");
 
+				Lay1EtaPhi->GetXaxis()->SetTitle("#eta");
+				Lay1EtaPhi->GetYaxis()->SetTitle("#phi");
+				Lay1EtaPhi->GetZaxis()->SetTitle("Number of Hits");
+				Lay1EtaPhi->GetZaxis()->SetTitleOffset(0.07);
+
+				Lay1EtaPhi->SetTitle("Number of Hits for Layer 1 #eta and #phi Distribution");
+
 				cout << "Clear " << endl;
 			}
 
@@ -163,7 +170,8 @@ namespace o2
 
 				getObjectsManager()->startPublishing(ChipStave);
 				getObjectsManager()->addCheck(ChipStave, "checkFromITSQCTask", "o2::quality_control_modules::itsqctask::ITSQCCheck","QcITSQCTask");
-
+				Lay1EtaPhi->Draw("COLZ");
+				c->SaveAs("EtaPhiLay1.png");
 
 				//	getObjectsManager()->startPublishing(mHistogram);
 				//		getObjectsManager()->addCheck(mHistogram, "checkFromITSQCTask", "o2::quality_control_modules::itsqctask::ITSQCCheck","QcITSQCTask");
@@ -191,14 +199,19 @@ namespace o2
 					gm->getChipId (ChipID, lay, sta, ssta, mod, chip);
 					// lay =  gm->GetLayer(ChipID);
 					// sta =  gm->getStave(ChipID);
-
+					gm->fillMatrixCache(o2::utils::bit2Mask(o2::TransformType::L2G));
+					const Point3D<float> loc(0., 0.,0.); 
+					auto glo = gm->getMatrixL2G(ChipID)(loc);
+			
 					if (lay < 1)
 					{
 
 						//	QcInfoLogger::GetInstance()  << "ChipID = " << ChipID <<  AliceO2::InfoLogger::InfoLogger::endm;
 						ActPix = mChipData->getData ().size ();
-
+						eta = glo.eta();
+						phi = glo.phi();
 						Occupancy[ChipID] = Occupancy[ChipID] + ActPix;
+						Lay1EtaPhi->Fill(eta,phi,ActPix);
 					}
 				}
 				QcInfoLogger::GetInstance()  << "Start Filling" <<  AliceO2::InfoLogger::InfoLogger::endm;

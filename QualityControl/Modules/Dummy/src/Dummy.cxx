@@ -142,6 +142,8 @@ namespace o2
 				for (auto&& input : ctx.inputs()) {
 					// get message header
 					QcInfoLogger::GetInstance() << "BEEN HERE BRO" << AliceO2::InfoLogger::InfoLogger::endm;
+					auto digits = ctx.inputs().get<const std::vector<o2::ITSMFT::Digit>>("digits");
+					LOG(INFO) << "ITSClusterer pulled " << digits.size() << " digits, ";
 
 					const auto* header = header::get<header::DataHeader*>(input.header);
 					// get payload of a specific input, which is a char array.

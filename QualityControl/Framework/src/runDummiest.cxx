@@ -76,7 +76,7 @@ WorkflowSpec defineDataProcessing(ConfigContext const&)
 {
 	WorkflowSpec specs;
 	o2::Base::GeometryManager::loadGeometry();
-/*
+
 	// The producer to generate some data in the workflow
 	DataProcessorSpec producer{
 		"producer",
@@ -86,10 +86,9 @@ WorkflowSpec defineDataProcessing(ConfigContext const&)
 			},
 			AlgorithmSpec{
 				(AlgorithmSpec::InitCallback) [](InitContext&) {
-					usleep(100000);
+					usleep(1000);
 					o2::Base::GeometryManager::loadGeometry();	
-					        std::default_random_engine generator(11);
-					return (AlgorithmSpec::ProcessCallback)  [generator](ProcessingContext& processingContext) mutable {
+					return (AlgorithmSpec::ProcessCallback)  [](ProcessingContext& processingContext) mutable {
 						std::unique_ptr<TFile> mFile = std::make_unique<TFile>("itsdigits.root");
 						std::unique_ptr<TTree> tree((TTree*)mFile->Get("o2sim"));
 						if (tree) {
@@ -113,45 +112,15 @@ WorkflowSpec defineDataProcessing(ConfigContext const&)
 							LOG(ERROR) << "Cannot read the ITS digits !";
 							return;
 						}
-						size_t length = generator() % 10000;
-						auto data = processingContext.outputs().make<char>(Output{ "ITS", "DIGITS", 0, Lifetime::Timeframe },
-								length);
-						for (auto&& item : data) {
-							item = static_cast<char>(generator());
-						}
 					};
 				}
 			}
 	};
 	specs.push_back(producer);
 
-*/
-	  DataProcessorSpec producer{
-    "producer",
-    Inputs{},
-    Outputs{
-      { "ITS", "DIGITS", 0, Lifetime::Timeframe }
-    },
-    AlgorithmSpec{
-      (AlgorithmSpec::InitCallback) [](InitContext&) {
-        std::default_random_engine generator(11);
-        return (AlgorithmSpec::ProcessCallback) [generator](ProcessingContext& processingContext) mutable {
-          usleep(100000);
-          size_t length = generator() % 10000;
-          auto data = processingContext.outputs().make<char>(Output{ "ITS", "DIGITS", 0, Lifetime::Timeframe },
-                                                             length);
-          for (auto&& item : data) {
-            item = static_cast<char>(generator());
-          }
-        };
-      }
-    }
-  };
-
-  specs.push_back(producer);
 
 
-	const std::string qcConfigurationSource = std::string("json://") + getenv("QUALITYCONTROL_ROOT") + "/etc/PrintTest.json";
+	const std::string qcConfigurationSource = std::string("json://") + getenv("QUALITYCONTROL_ROOT") + "/etc/Dummiest.json";
 	LOG(INFO) << "Using config file '" << qcConfigurationSource << "'";
 
 	// Generation of Data Sampling infrastructure

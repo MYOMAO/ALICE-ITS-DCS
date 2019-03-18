@@ -88,7 +88,7 @@ namespace o2
 				void endOfCycle() override;
 				void endOfActivity(Activity& activity) override;
 				void reset() override;
-//				o2::ITSMFT::GeometryTGeo* gm = o2::ITSMFT::GeometryTGeo::Instance();
+				//				o2::ITSMFT::GeometryTGeo* gm = o2::ITSMFT::GeometryTGeo::Instance();
 
 
 
@@ -100,7 +100,7 @@ namespace o2
 				std::vector<ChipPixelData> mChipsOld;
 				o2::ITSMFT::PixelReader* mReader = nullptr; 
 				std::unique_ptr<o2::ITSMFT::DigitPixelReader> mReaderMC;    
-//				std::unique_ptr<o2::ITSMFT::RawPixelReader<o2::ITSMFT::ChipMappingITS>> mReaderRaw; 
+				//				std::unique_ptr<o2::ITSMFT::RawPixelReader<o2::ITSMFT::ChipMappingITS>> mReaderRaw; 
 				UInt_t mCurrROF = o2::ITSMFT::PixelData::DummyROF; 
 				int* mCurr; // pointer on the 1st row of currently processed mColumnsX
 				int* mPrev; // pointer on the 1st row of previously processed mColumnsX
@@ -113,6 +113,8 @@ namespace o2
 				int lay, sta, ssta, mod, chip;
 				TH2D * ChipStave = new TH2D("ChipStave","ChipStave",NLay1,0,NLay1,NEventMax,0,NEventMax);
 				TH1D * ChipProj = new TH1D("ChipProj","ChipProj",NLay1,0,NLay1);
+				TH2D * Lay1EtaPhi = new TH2D("Lay1EtaPhi","Lay1EtaPhi",NEta,EtaMin,EtaMax,NPhi,PhiMin,PhiMax);
+				TH2D * Lay1ChipStave = new TH2D("Lay1ChipStave","Lay1ChipStave",NChipsSta,0,NChipsSta,NSta1,0,NSta1);
 				o2::ITS::GeometryTGeo * gm = o2::ITS::GeometryTGeo::Instance();
 
 				void swapColumnBuffers()
@@ -133,7 +135,17 @@ namespace o2
 				double AveOcc;
 				UShort_t ChipID; 
 				int ActPix;
-
+				TFile * fout;
+				const int NEta = 10;
+				const double EtaMin = -2.5;
+				const double EtaMax = 2.5;
+				const int NPhi = 10;
+				const double PhiMin = -3.15;
+				const double PhiMax = 3.15;
+				const int NChipsSta = 9;
+				const int NSta1 = NLay1/NChipsSta;
+				double eta;
+				double phi;
 			};
 
 		} // namespace itsqctask

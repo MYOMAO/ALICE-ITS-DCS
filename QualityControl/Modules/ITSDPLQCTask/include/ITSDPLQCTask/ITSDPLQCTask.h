@@ -78,11 +78,7 @@ namespace o2
 						mChips.resize(n);
 						mChipsOld.resize(n);
 					}
-					void setDigits(const std::vector<o2::ITSMFT::Digit>* a)
-					{
-						mDigits = a;
-						mIdx = 0;
-					}
+
 
 
 				private:
@@ -98,13 +94,27 @@ namespace o2
 					int* mPrev; // pointer on the 1st row of previously processed mColumnsX
 					static constexpr int   NCols = 1024;
 					static constexpr int   NRows = 512;
+					const int NColHis = 1024;
+					const int NRowHis = 512;
+					const int NStaves = 1;
+					int NStaveChip[1] = {9};
+
 					static constexpr int   NPixels = NRows*NCols;
 					const int NLay1 = 108;
 					const int NEventMax = 20;
-					double Occupancy[108];
+					double Occupancy[24120];
+					static constexpr int NLayer = 7;
+					int ChipBoundary[NLayer + 1] ={0,108,252,432,3120,6480,14712,24120}; 
+					int NChipLay[NLayer];
+
 					int lay, sta, ssta, mod, chip;
-					TH2D * ChipStave = new TH2D("ChipStave","ChipStave",NLay1,0,NLay1,NEventMax,0,NEventMax);
-					TH1D * ChipProj = new TH1D("ChipProj","ChipProj",NLay1,0,NLay1); 
+					TH2D * ChipStave[NLayer]; 
+					TH1D * ChipProj[NLayer];
+					TH2D * LayEtaPhi[NLayer]; 
+					TH2D * LayChipStave[NLayer]; 					
+
+
+					TH2D * HIGMAP[9];
 					void swapColumnBuffers()
 					{
 						int* tmp = mCurr;
@@ -117,7 +127,7 @@ namespace o2
 						std::memset(buff, -1, sizeof(int) * NRows);
 
 					}
-				    Int_t mIdx = 0;
+					Int_t mIdx = 0;
 					const std::string inpName = "rawits.bin";
 
 					o2::ITS::GeometryTGeo * gm = o2::ITS::GeometryTGeo::Instance();
@@ -125,6 +135,16 @@ namespace o2
 					UShort_t ChipID; 
 					int ActPix;
 					TFile * fout;
+					const int NEta = 10;
+					const double EtaMin = -2.5;
+					const double EtaMax = 2.5;
+					const int NPhi = 10;
+					const double PhiMin = -3.15;
+					const double PhiMax = 3.15;
+					const int NChipsSta = 9;
+					const int NSta1 = NLay1/NChipsSta;
+					double eta;
+					double phi;
 
 			};
 
