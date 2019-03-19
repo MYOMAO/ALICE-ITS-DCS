@@ -79,12 +79,23 @@ namespace o2
 					LayEtaPhi[i]->GetZaxis()->SetTitle("Number of Hits");
 					LayEtaPhi[i]->GetZaxis()->SetTitleOffset(0.07);
 					LayEtaPhi[i]->SetTitle(Form("Number of Hits for Layer %d #eta and #phi Distribution",i));
+	
 
+					NStaveChip[i] = NChipLay[i]/NStaves[i];
+
+					LayChipStave[i] = new TH2D(Form("LayChipStave%d",i),Form("LayChipStave%d",i),NStaveChip[i],0,NStaveChip[i],NStaves[i],0,NStaves[i]);
+					LayChipStave[i]->GetXaxis()->SetTitle("Chip Number");
+					LayChipStave[i]->GetYaxis()->SetTitle("Stave Number");
+					LayChipStave[i]->GetZaxis()->SetTitle("Number of Hits");
+					LayChipStave[i]->GetZaxis()->SetTitleOffset(0.20);
+					LayChipStave[i]->SetTitle(Form("Number of Hits for Layer %d Chip Number and Stave Number Distribution",i));
+
+					
 				}
 
 
 
-				for(int j = 0; j < NStaves; j++){
+				for(int j = 0; j < 1; j++){
 					for(int i = 0; i < NStaveChip[j]; i++){
 						HIGMAP[i]	= new TH2D("HIGMAP","HIGMAP",100,0,NColHis,100,0,NRowHis);
 						HIGMAP[i]->GetXaxis()->SetTitle("Column");
@@ -94,8 +105,19 @@ namespace o2
 				}
 
 				cout << "Clear " << endl;
+				/*
+				for(int i = 0 ; i < 24120; i++){	
+				gm->getChipId (i, lay, sta, ssta, mod, chip);
+				gm->fillMatrixCache(o2::utils::bit2Mask(o2::TransformType::L2G));
+				const Point3D<float> loc(0., 0.,0.); 
+				auto glo = gm->getMatrixL2G(i)(loc);
+				eta = glo.eta();
+				phi = glo.phi();
+				cout << "CHip ID = " << i << "   Layer = " << lay  << "  Stave = " << sta << "  eta = " << eta << "   phi = " << phi << endl;
 
-
+				}
+				*/
+			
 			}
 
 			ITSDPLQCTask::~ITSDPLQCTask() {
@@ -185,9 +207,16 @@ namespace o2
 					cout << "Eta Phi Total = " << 	LayEtaPhi[j]->Integral() << endl;
 					c->SaveAs(Form("EtaPhiLay%d.png",j));
 				}
+
+				for(int j = 0; j < NLayer; j++){ 
+					LayChipStave[j]->Draw("COLZ");
+					cout << "LayChipStave Total = " << 	LayChipStave[j]->Integral() << endl;
+					c->SaveAs(Form("LayChipStave%d.png",j));
+				}
+
 				TCanvas *c1 = new TCanvas ("c1", "c1", 600, 600);
 
-				for(int j = 0; j < NStaves; j++){
+				for(int j = 0; j < 1; j++){
 					c1->Divide(3,3);
 					for(int i = 0; i < NStaveChip[j]; i++){
 						c1->cd(i+1);
@@ -195,12 +224,14 @@ namespace o2
 					}
 					c1->SaveAs(Form("HIGMAPStave%d.png",j+1));
 				}
-				getObjectsManager()->startPublishing(ChipStave[4]);
+
+				for(int i = 0; i < NLayer; i++){
+				getObjectsManager()->startPublishing(ChipStave[i]);
 				//getObjectsManager()->addCheck(ChipStave, "checkFromITSDPLQCTask", "o2::quality_control_modules::itsdplqctask::ITSDPLQCTaskCheck",	"QcITSDPLQCTask");
 
-				getObjectsManager()->startPublishing(ChipProj[4]);
-				getObjectsManager()->startPublishing(LayEtaPhi[4]);
-
+				getObjectsManager()->startPublishing(ChipProj[i]);
+				getObjectsManager()->startPublishing(LayEtaPhi[i]);
+				}
 
 				mHistogram = new TH1F("example", "example", 20, 0, 30000);
 				//	getObjectsManager()->addCheck(mHistogram, "checkFromITSDPLQCTask", "o2::quality_control_modules::itsdplqctask::ITSDPLQCTaskCheck",	"QcITSDPLQCTask");
@@ -265,7 +296,7 @@ namespace o2
 				//  const auto* header = header::get<header::DataHeader*>(ctx.inputs().get("random").header);
 				//  struct s {int a; double b;};
 				//  auto array = ctx.inputs().get<s*>("random");
-				//  for (int j = 0; j < header->payloadSize / sizeof(s); ++j) {
+				//  for (int j = 0; j < header->payloadSize / sizeof(s); ++j) LayChipStave{
 				//    int i = array.get()[j].a;
 				//  }
 
@@ -303,13 +334,17 @@ namespace o2
 					{
 						//cout << "lay = " <<  lay << endl;
 						//cout << "ChipID = " << ChipID << endl;
+						
+						int ChipNumber = (ChipID - ChipBoundary[lay])- sta*	NStaveChip[lay];
 						ActPix = mChipData->getData().size();
-
+						
+						//cout << "ChipNumber = " << ChipNumber << endl;
 						eta = glo.eta();
 						phi = glo.phi();
 						Occupancy[ChipID] = Occupancy[ChipID] + ActPix;
+					
 						LayEtaPhi[lay]->Fill(eta,phi,ActPix);
-
+						LayChipStave[lay]->Fill(ChipNumber,sta,ActPix);
 						if(sta == 0 && ChipID < NLay1){
 							//cout << "ChipID in Stave 0 = " << ChipID << endl; 
 							for(int ip = 0; ip < ActPix; ip++){

@@ -81,6 +81,7 @@ namespace o2
 
 
 
+
 				private:
 					TH1F* mHistogram;
 					ChipPixelData* mChipData = nullptr; 
@@ -96,9 +97,7 @@ namespace o2
 					static constexpr int   NRows = 512;
 					const int NColHis = 1024;
 					const int NRowHis = 512;
-					const int NStaves = 1;
-					int NStaveChip[1] = {9};
-
+		
 					static constexpr int   NPixels = NRows*NCols;
 					const int NLay1 = 108;
 					const int NEventMax = 20;
@@ -111,9 +110,10 @@ namespace o2
 					TH2D * ChipStave[NLayer]; 
 					TH1D * ChipProj[NLayer];
 					TH2D * LayEtaPhi[NLayer]; 
-					TH2D * LayChipStave[NLayer]; 					
+					TH2D * LayChipStave[NLayer]; 
 
-
+					const int NStaves[NLayer] = {12,16,20,24,30,42,48};
+					int NStaveChip[NLayer];
 					TH2D * HIGMAP[9];
 					void swapColumnBuffers()
 					{
@@ -135,12 +135,12 @@ namespace o2
 					UShort_t ChipID; 
 					int ActPix;
 					TFile * fout;
-					const int NEta = 10;
-					const double EtaMin = -2.5;
-					const double EtaMax = 2.5;
-					const int NPhi = 10;
-					const double PhiMin = -3.15;
-					const double PhiMax = 3.15;
+					const int NEta = 9;
+					const double EtaMin = -2.40;
+					const double EtaMax = 2.40;
+					const int NPhi = 12;
+					const double PhiMin = -2.90;
+					const double PhiMax = 2.90;
 					const int NChipsSta = 9;
 					const int NSta1 = NLay1/NChipsSta;
 					double eta;
