@@ -1,0 +1,47 @@
+# Geant4 standard configuration based on AliDPG commit 7650a5b
+
+/control/verbose 2
+/mcVerbose/all 1
+/mcVerbose/geometryManager 1
+/mcVerbose/opGeometryManager 1
+/mcTracking/loopVerbose 1
+/mcVerbose/composedPhysicsList 2
+#/tracking/verbose 1
+#//control/cout/ignoreThreadsExcept 0
+
+/mcPhysics/rangeCuts 0.01 mm
+/mcTracking/skipNeutrino true
+/mcDet/setIsMaxStepInLowDensityMaterials true
+/mcDet/setMaxStepInLowDensityMaterials 10 m
+/mcMagField/setConstDistance 1 mm
+
+# optical
+
+/process/optical/verbose 0
+/process/optical/processActivation Scintillation 0
+/process/optical/processActivation OpWLS 0
+/process/optical/processActivation OpMieHG 0
+/process/optical/setTrackSecondariesFirst Cerenkov 0
+/mcMagField/stepperType NystromRK4
+
+# PAI for TRD
+# Geant4 VMC >= v3.2
+/mcPhysics/emModel/setEmModel  PAI
+/mcPhysics/emModel/setRegions  TRD_Gas-mix
+/mcPhysics/emModel/setParticles  all
+
+#
+# Precise Msc for EMCAL
+#
+# Geant4 VMC >= v3.2
+/mcPhysics/emModel/setEmModel  SpecialUrbanMsc
+/mcPhysics/emModel/setRegions  EMC_Lead$ EMC_Scintillator$
+/mcPhysics/emModel/setParticles  e- e+
+
+#
+# Adding extra lines for fixing tracking bias
+#
+/mcMagField/setDeltaIntersection  1.0e-05 mm
+/mcMagField/setMinimumEpsilonStep 0.5e-05
+/mcMagField/setMaximumEpsilonStep 1.0e-05
+/mcMagField/printParameters

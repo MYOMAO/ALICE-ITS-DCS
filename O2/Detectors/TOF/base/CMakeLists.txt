@@ -1,0 +1,29 @@
+SET(MODULE_NAME TOFBase)
+
+O2_SETUP(NAME ${MODULE_NAME})
+
+set(SRCS
+  src/Geo.cxx
+  src/Digit.cxx
+)
+
+set(HEADERS
+  include/${MODULE_NAME}/Geo.h
+  include/${MODULE_NAME}/Digit.h
+)
+
+SET(LINKDEF src/TOFBaseLinkDef.h)
+SET(LIBRARY_NAME ${MODULE_NAME})
+SET(BUCKET_NAME tof_base_bucket)
+
+O2_GENERATE_LIBRARY()
+
+set(TEST_SRCS
+  test/testTOFIndex.cxx
+)
+
+O2_GENERATE_TESTS(
+  MODULE_LIBRARY_NAME ${LIBRARY_NAME}
+  BUCKET_NAME ${BUCKET_NAME}
+  TEST_SRCS ${TEST_SRCS}
+)

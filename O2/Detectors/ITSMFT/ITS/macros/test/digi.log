@@ -1,0 +1,36 @@
+[INFO] Loading field from GRP of o2sim_grp.root 
+Run: 1553678600
+Fill:      0
+Period: 
+LHC State: 
+Start: Wed Mar 27 10:23:21 2019
+End  : Wed Mar 27 10:23:22 2019
+Beam0: Z:A =   0:  0, Energy = 0.000
+Beam1: Z:A =   0:  0, Energy = 0.000
+sqrt[s]    = 0.000
+crossing angle (radian) = 0.000000e+00
+magnet currents (A) L3 = -30000.000, Dipole = -6000
+Detectors: Cont.RO Triggers
+      ITS:    -       -    
+[INFO] MagneticField::Print: MagneticFieldMap:
+[INFO] MagneticField::Print: Solenoid (-1*)5 kG, Dipole ON (-1) 
+[INFO] MagneticField::Print: Machine B fields for p-p  beam (7000 GeV): QGrad: 22.0002 Dipole: 37.8781
+[INFO] MagneticField::Print: Uses Sol30_Dip6_Hole  of /data/zhaozhong/aliceClean/sw/slc7_x86-64/O2/1.0.0-1/share/Common/maps/mfchebKGI_sym.root
+Info in <TGeoGlobalMagField::SetField>: Global magnetic field set to <MagneticFieldMap>
+Info in <TGeoGlobalMagField::Lock>: Global magnetic field <MagneticFieldMap> is now locked
+[INFO] Running with the B field constructed out of GRP 
+[INFO] Access field via TGeoGlobalMagField::Instance()->Field(xyz,bxyz) or via 
+[INFO] auto o2field = static_cast<o2::field::MagneticField*>( TGeoGlobalMagField::Instance()->GetField() ) 
+[INFO] TPC: GEM setup - initialization from scratch
+[INFO] TPC: GEM setup (polya) took 9.91
+[INFO] TPC is in grp? no; is skipped? no
+[INFO] ITS is in grp? yes; is skipped? no
+[INFO] MFT is in grp? no; is skipped? no
+[INFO] TOF is in grp? no; is skipped? no
+[INFO] FIT is in grp? no; is skipped? no
+[INFO] EMC is in grp? no; is skipped? no
+[INFO] HMP is in grp? no; is skipped? no
+[INFO] TRD is in grp? no; is skipped? no
+[INFO] MCH is in grp? no; is skipped? no
+[INFO] MID is in grp? no; is skipped? no
+Error: unrecognised option '--ITStriggered'

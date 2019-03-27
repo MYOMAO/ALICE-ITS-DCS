@@ -1,0 +1,12 @@
+/build/
+.cproject
+.project
+*~
+.idea
+*.jpg
+example.ini
+imgui.ini
+README.md.*
+cmake-build-*
+Framework/test/testCcdbApi2.cxx
+local_history.patch
